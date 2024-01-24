@@ -7,41 +7,95 @@ display: flex;
 
 .first-half{
 
-    width: 50%;
-   
-}
-
-.Second-half{
-        border: 1px solid rgb(128, 0, 79);
-            width: 50%;
-            height: 50vh;
-            float: left;
-            /* background-color: rgb(255, 123, 0); */
-}
-
-
-
-.button{
-  border: none;
-  background-color: rgb(10, 160, 10);
-  padding: 5px;
-  color: white;
-
+width: 77%;
+    margin-left: 22%;
+    margin-top: 20px;
+    /* border: 1px solid greenyellow; */
 
 }
-.plus{
+.title-section{
+    /* border: 1px solid red; */
+    position: absolute;
+}
+
+
+
+
+
+.button-section{
+    /* border: 1px solid gold; */
+    display: flex;
+justify-content: end;
+margin-right: 30px;
+
+
+}
+.Heading {
+    padding: 10px 0px 1px 20px;
+}
+
+button{
+    padding: 8px;
+    background-color:#71b944;
+    font-weight: bold;
+    border:none;
+font-weight: bold;
 color: white;
-width: 50px;
-    background-color: #a0e404;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    text-align: center;
-    border: none;
-    padding: 5px;
+    border-bottom-right-radius: 30px;
+        border-top-right-radius: 30px;
+    }
+.plus{
+        border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+            background-color:#65a73f;
+       
+            color: white;
+            font-weight: 800;
+            width: 22px;
+            padding: 5px 0px 7px 10px;
+        }
 
+
+section{
+    margin-top: 20px;
+    width: 77%;
+margin-left: 22%;
+border: 1px solid rgb(233, 228, 228);
+background-color: rgb(233, 228, 228);
 }
 
-.btn{
-
+.container{
+ 
+    margin: 20px;
+    /* border: 1px solid blue; */
+ display: flex;
+justify-content: space-between;
+ margin-bottom: 35px;
 }
 
+.card{
+ 
+    background-color: crimson;
+        height: 100px;
+        width: 215px;
+        border: none;
+        text-align: center;
+        border-radius: 2px;
+    
+        }
+
+        .hero-section{
+            /* border: 1px solid orange; */
+    border-radius: 3px;
+        box-sizing: border-box;
+        border: none;
+        box-shadow: 2px 3px 14px grey;
+        margin: 25px;
+        background-color: white;
+        height: 60vh;
+        }
+
+        .card-item{
+            margin-top: 35px;
+            color:white;
+        }
