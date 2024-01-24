@@ -1,0 +1,47 @@
+
+main{
+width: 100%;
+display: flex;
+}
+
+
+.first-half{
+
+    width: 50%;
+   
+}
+
+.Second-half{
+        border: 1px solid rgb(128, 0, 79);
+            width: 50%;
+            height: 50vh;
+            float: left;
+            /* background-color: rgb(255, 123, 0); */
+}
+
+
+
+.button{
+  border: none;
+  background-color: rgb(10, 160, 10);
+  padding: 5px;
+  color: white;
+
+
+}
+.plus{
+color: white;
+width: 50px;
+    background-color: #a0e404;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    text-align: center;
+    border: none;
+    padding: 5px;
+
+}
+
+.btn{
+
+}
+
