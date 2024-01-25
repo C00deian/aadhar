@@ -1,0 +1,35 @@
+--root {
+  --text-color: #333;
+  --hover-color: #c1aeae91;
+}
+.down{
+    width: 250px;
+    height: 50vh;
+    border-radius: 4px;
+    /* border-top: 2px solid rgba(0, 0, 0, 0.345); */
+}
+.down ul {
+  list-style: none;
+  padding: 20px;
+}
+
+.down ul li {
+ 
+  line-height:2;
+ margin: 10px 0;
+}
+
+
+.down ul li a {
+   display: flex;
+  gap:10px;
+  color: var(--text-color);
+  text-decoration: none;
+  font-size:1rem;
+  font-weight: 500;
+}
+ 
+
+.down ul li a:hover {
+  color:rgba(26, 18, 173, 0.686);
+}

@@ -14,8 +14,8 @@ function Breadcrumbs() {
             >
                 Home <span><i class="ri-arrow-right-s-line"></i> </span>
             </Link>
-            <Link to="/products"
-                className={location.pathname.startsWith("/products") ? "breadcrumb-active" : "breadcrumb-not-active"}
+            <Link to="/add-customer"
+                className={location.pathname.startsWith("/add-customer") ? "breadcrumb-active" : "breadcrumb-not-active"}
             >
                 Dashboard<span> <i class="ri-arrow-right-s-line"></i> </span>
             </Link>

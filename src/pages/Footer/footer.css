@@ -1,0 +1,28 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Arial', sans-serif; */
+}
+
+footer {
+ 
+    color:black;
+    text-align: center;
+    padding: 15px 0;
+
+    bottom: 0;
+    margin-left: 19%;
+    width: 81%;
+}
+
+.copyright {
+    /* max-width: 1200px; */
+    margin: 0 auto;
+}
+
+p {
+    margin: 0;
+    font-weight: 400;
+    font-size: 15px;
+}

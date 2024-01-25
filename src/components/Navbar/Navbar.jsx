@@ -12,7 +12,9 @@ const Navbar = () => {
         
           <ul >
               <li>
-                <Hamburger style={{fill:'white'}}/>
+          <Hamburger style={{
+            fill: 'white',
+        marginLeft:'15px' }} />
               </li>
 
            

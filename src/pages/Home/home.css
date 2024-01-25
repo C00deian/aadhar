@@ -1,0 +1,125 @@
+main {
+    width: 100%;
+    display: flex;
+}
+
+* {
+font-family: 'Cantarell', sans-serif;
+    font-family: 'Dosis', sans-serif;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+.first-half {
+
+    width: 77%;
+    margin-left: 22%;
+    margin-top: 20px;
+    /* border: 1px solid greenyellow; */
+
+}
+
+.title-section {
+    /* border: 1px solid red; */
+    position: absolute;
+}
+
+
+
+
+
+.button-section {
+    /* border: 1px solid gold; */
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 30px;
+
+}
+
+.Heading {
+    padding: 20px 0px 1px 20px;
+}
+
+button {
+    padding: 10px;
+    background-color: #71b944;
+    border: none;
+    color: white;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.plus {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    background-color: #65a73f;
+    color: white;
+    font-weight: 800;
+    width: 30px;
+    padding: 7px 0px 5px 9px;
+}
+
+
+
+section {
+    margin-top: 20px;
+    width: 81%;
+    margin-left: 19%;
+    border: 1px solid rgb(233, 228, 228);
+    background-color: rgb(233, 228, 228);
+}
+
+.container {
+
+    margin: 20px;
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 55px;
+}
+
+.card {
+
+    /* background-color: crimson; */
+    height: 105px;
+    width: 225px;
+    border: none;
+    text-align: center;
+    border-radius: 3px;
+    
+
+}
+
+.hero-section {
+    /* border: 1px solid orange; */
+    border-radius: 3px;
+    box-sizing: border-box;
+    border: none;
+    box-shadow: 2px 3px 14px grey;
+    margin: 25px;
+    background-color: rgba(255, 255, 255, 0.904);
+    height: 71vh;
+}
+
+.card-item {
+    margin-top: 35px;
+    color: white;
+  
+}
+
+.card-1 {
+    background-color: #2a9cfb;
+}
+
+.card-2 {
+    background-color: #fdb939;
+}
+
+.card-3 {
+    background-color: #71ba43;
+}
+
+.card-4 {
+    background-color: #ff6067;
+}

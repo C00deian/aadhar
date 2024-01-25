@@ -1,0 +1,25 @@
+--root {
+  --bg-color: #fff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
+}
+
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: var(--bg-color);
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  box-shadow: 0 0 7px #333;
+  overflow-y: auto;
+}
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
