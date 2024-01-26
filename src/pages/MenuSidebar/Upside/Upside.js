@@ -11,7 +11,7 @@ function Upside() {
       <div className="info">
         <h3>Gyanendra</h3>
         <p className="wel">Welcome</p>
-        <p>Ip Address:<br/>196:162:48:255</p>
+        <p>Ip Address:<br/>196.162.48.255</p>
       </div>
     </div>
   );

@@ -13,7 +13,9 @@ const Home = () => {
 
           <p style={{ fontSize: '17px' }}>Dashboard</p>
           <div className='breadcrumb'>
-            <Breadcrumbs></Breadcrumbs>
+       
+              <Breadcrumbs></Breadcrumbs>
+         
           </div>
         </div>
 
@@ -26,9 +28,6 @@ const Home = () => {
         </div>
 
       </div>
-
-
-
 
 
 

@@ -5,6 +5,7 @@ import Navbar from './components/Navbar/Navbar';
 import Home from './pages/Home/Home';
 import PersonEntry from './components/PersonEntry/PersonEntry';
 import Menubar from './pages/MenuSidebar/Menubar';
+import List from './components/Customer-List/List';
 const Routing = () => {
 
 
@@ -12,23 +13,27 @@ const Routing = () => {
 
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/add-customer" element={<PersonEntry/>} />
+      <Route path="/add-customer" element={<PersonEntry />} />
+      <Route path="/list" element={<List />} />
     </Routes>
 
   )
 }
 function App() {
   return (
-    <div className="App">
+ 
 
       
       <Router>
-        <Navbar/>
+      <Navbar />
+      <div className="App">
         <Menubar />
+      </div>
         <Routing></Routing>
+      
       </Router>
       
-    </div>
+   
   );
 }
 

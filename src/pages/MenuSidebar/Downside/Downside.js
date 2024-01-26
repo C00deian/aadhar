@@ -44,7 +44,7 @@ function Downside() {
                 </Link>
               </li>
               <li>
-                <Link href="#">
+                <Link to="/list">
                   <i class="ri-eye-fill"></i>View Entry Data
                 </Link>
               </li>

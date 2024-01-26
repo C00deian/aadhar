@@ -1,0 +1,19 @@
+{
+    "Products": [
+        {
+            "id": "1",
+            "points" : 2030,
+            "title": "ritik kumar",
+            "total": 2020
+        },
+        {
+            "id": "2",
+            "title": "shashi"
+        },
+
+        {
+            "id": "2",
+            "title": "Arun"
+        }
+    ]
+}
