@@ -1,17 +1,42 @@
-import React from 'react'
-import Table from 'react-bootstrap/Table'
+import React, { useEffect, useState } from 'react';
+import Table from 'react-bootstrap/Table';
 import { Link } from 'react-router-dom';
-import Products from '../../data';
+import axios from 'axios';
 import Breadcrumbs from '../../pages/breadcumbs/Breadcrumbs';
 import './list.css';
+import CSVDownloadButton from '../../pages/Download/CSV/CSVDownloadButton';
+import PDFDownloadButton from '../../pages/Download/PDF/PDFDownloadButton';
+import ExcelDownloadButton from '../../pages/Download/ExcelDownloadButton';
+import CopyButton from '../../pages/Download/CopyButton';
 
 function List() {
+    const [data, setData] = useState([]);
+    const [error, setError] = useState([]);
+    const [selectedRow, setSelectedRow] = useState(null);
+
+    useEffect(() => {
+        // Define the API endpoint URL
+        const apiUrl = 'http://localhost:4001/Products';
+
+        // Make a GET request using Axios
+        axios.get(apiUrl)
+            .then(response => {
+                setData(response.data);
+            })
+            .catch(err => {
+                console.log('Something Went Wrong');
+                setError(err);
+            });
+    }, []);
+
+    const handleIconClick = (index) => {
+        setSelectedRow(selectedRow === index ? null : index);
+    };
+
     return (
         <>
-
             <div className='first-half'>
                 <div className='title-section'>
-
                     <p style={{ fontSize: '17px' }}>Dashboard</p>
                     <div className='breadcrumb'>
                         <Breadcrumbs></Breadcrumbs>
@@ -19,20 +44,23 @@ function List() {
                 </div>
 
                 <div className='button-section'>
-                    <i class="ri-add-fill plus"></i>
-                    <button>Create New</button>
+                    <i className={selectedRow !== null ? 'ri-close-fill' : 'ri-add-fill plus'} onClick={() => handleIconClick(null)}></i>
+                    <Link to='/add-customer'>
+                        <button>Create New</button>
+                    </Link>
                 </div>
-
             </div>
-            {
 
-                Products ? (
-
-                    
-                    
-                        <section>
-                            <div className='hero-section'>
-                        <Table striped bordered hover  className="custom-table">
+            {data ? (
+                <section>
+                    <div className='hero-section'>
+                        <div className='Download-Button'>
+                            <CopyButton />
+                            <ExcelDownloadButton />
+                            <CSVDownloadButton />
+                            <PDFDownloadButton />
+                        </div>
+                        <Table striped bordered hover className="custom-table">
                             <thead>
                                 <tr>
                                     <th>S.N.</th>
@@ -41,43 +69,52 @@ function List() {
                                     <th>Aadhaar No.</th>
                                     <th>Mobile No.</th>
                                     <th>E-mail ID</th>
-
                                 </tr>
                             </thead>
-
                             <tbody>
-
-
-                                {
-
-
-                                    Products.length > 0 ? Products.map((item, index) =>
-                                        <tr key={item._id}>
-                                            <td>{index + 1}</td>
+                                {data.length > 0 ? data.map((item, index) => (
+                                    <React.Fragment key={item._id}>
+                                        <tr>
+                                            <td>
+                                                <div className='DropDown' onClick={() => handleIconClick(index)}>
+                                                    <i className={selectedRow === index ? 'ri-close-fill' : 'ri-add-fill'}></i>
+                                                </div>
+                                                {index + 1}
+                                            </td>
                                             <td>{item.name}</td>
                                             <td>{item.age}</td>
-                                            <td>{item.aadhar}</td>
+                                            <td>{item.aadhaar}</td>
                                             <td>{item.mobile}</td>
                                             <td>{item.email}</td>
-
                                         </tr>
-                                    )
-
-                                        : <h1 className='list-record'> Record Not Found😞</h1>
-                                }
-
+                                        {selectedRow === index && (
+                                            <tr>
+                                                <td colSpan="6">
+                                                    {/* Dropdown content */}
+                                                    <div className="dropdown-content">
+                                                        <p>Sample Content</p>
+                                                        <p>Modify this as needed</p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        )}
+                                    </React.Fragment>
+                                )) : (
+                                    <tr>
+                                        <td colSpan="6">
+                                            <h1 className='list-record'>Record Not Found😞</h1>
+                                        </td>
+                                    </tr>
+                                )}
                             </tbody>
-
-                                </Table>
-                            </div>
-                        </section>
-              
-                ) : (
-                    <p>Please Wait...</p>
-                )
-            }
+                        </Table>
+                    </div>
+                </section>
+            ) : (
+                <p>Please Wait...</p>
+            )}
         </>
-    )
+    );
 }
 
-export default List
+export default List;

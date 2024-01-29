@@ -1,0 +1,16 @@
+.Csv{
+    /* border: 1px solid red; */
+    /* display: flex; */
+
+}
+
+.Csv button{
+    float: left;
+    display: flex;
+    border: none;
+    margin: 20px 5px 20px 0px;
+    border-radius: 2px;
+    background-color: blue;
+    flex-direction: row;
+    cursor: pointer;
+}

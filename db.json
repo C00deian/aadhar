@@ -1,19 +1,145 @@
 {
-    "Products": [
-        {
-            "id": "1",
-            "points" : 2030,
-            "title": "ritik kumar",
-            "total": 2020
-        },
-        {
-            "id": "2",
-            "title": "shashi"
-        },
-
-        {
-            "id": "2",
-            "title": "Arun"
-        }
-    ]
+  "Products": [
+    {
+      "name": "John Doe",
+      "age": "01/04/2005",
+      "email": "john.doe@example.com",
+      "mobile": "123-456-7890",
+      "id": "b62f"
+    },
+    {
+      "name": "Jane Smith",
+      "age": "01/04/2005",
+      "email": "jane.smith@example.com",
+      "mobile": "987-654-3210",
+      "id": "ce0e"
+    },
+    {
+      "name": "Bob Johnson",
+      "age": "01/04/2005",
+      "email": "bob.johnson@example.com",
+      "mobile": "555-123-4567",
+      "id": "b805"
+    },
+    {
+      "name": "Alice Williams",
+      "age": "01/04/2005",
+      "email": "alice.williams@example.com",
+      "mobile": "456-789-0123",
+      "id": "c7a8"
+    },
+    {
+      "name": "Charlie Brown",
+      "age": "01/04/2005",
+      "email": "charlie.brown@example.com",
+      "mobile": "789-012-3456",
+      "id": "6b88"
+    },
+    {
+      "name": "Emma Davis",
+      "age": "01/04/2005",
+      "email": "emma.davis@example.com",
+      "mobile": "234-567-8901",
+      "id": "f747"
+    },
+    {
+      "name": "Frank Miller",
+      "age": "01/04/2005",
+      "email": "frank.miller@example.com",
+      "mobile": "890-123-4567",
+      "id": "0480"
+    },
+    {
+      "name": "Grace Wilson",
+      "age": "01/04/2005",
+      "email": "grace.wilson@example.com",
+      "mobile": "321-654-0987",
+      "id": "4190"
+    },
+    {
+      "name": "Henry Taylor",
+      "age": "01/04/2005",
+      "email": "henry.taylor@example.com",
+      "mobile": "111-222-3333",
+      "aadhaar": "5555-5555-5555",
+      "id": "1b8c"
+    },
+    {
+      "name": "Ivy Carter",
+      "age": "01/04/2005",
+      "email": "ivy.carter@example.com",
+      "mobile": "444-555-6666",
+      "id": "d755"
+    },
+    {
+      "name": "Jackie Brown",
+      "age": "01/04/2005",
+      "email": "jackie.brown@example.com",
+      "mobile": "777-888-9999",
+      "id": "a496"
+    },
+    {
+      "name": "Kevin Adams",
+      "age": "01/10/2022",
+      "email": "kevin.adams@example.com",
+      "mobile": "666-777-8888",
+      "id": "23fe"
+    },
+    {
+      "name": "Lily Johnson",
+      "age": "01/04/2005",
+      "email": "lily.johnson@example.com",
+      "mobile": "222-333-4444",
+      "id": "9b62"
+    },
+    {
+      "name": "Mike Robinson",
+      "age": "01/04/2005",
+      "email": "mike.robinson@example.com",
+      "mobile": "999-000-1111",
+      "id": "5522"
+    },
+    {
+      "name": "Nancy White",
+      "age": "01/04/2005",
+      "email": "nancy.white@example.com",
+      "mobile": "333-444-5555",
+      "id": "b3dc"
+    },
+    {
+      "id": "ea81",
+      "name": "ritik",
+      "age": "10/12/12022",
+      "email": "ritik9@Gmail.com",
+      "mobile": "8756567797",
+      "purpose": "woting",
+      "aadhaar": " 345634563456",
+      "address": "shahpur"
+    },
+    {
+      "id": "e330",
+      "name": "kk kashyap",
+      "age": "",
+      "email": "ritikkumarkashyap9@gmail.com",
+      "mobile": "07985698195",
+      "purpose": "ritit",
+      "aadhaar": "20220222020",
+      "address": "sonia vihar",
+      "fathern": "rrrr",
+      "date": "2024-01-11"
+    },
+    {
+      "id": "d655",
+      "name": "Ritik kumar",
+      "dateofbirth": "2024-01-12",
+      "email": "Amit123@gmail.com",
+      "mobile": "64565654344",
+      "purpose": "Name correction",
+      "aadhaar": "123423454567",
+      "address": "sonia vihar",
+      "fathern": "Gopal Bind"
+    }
+  ]
+ 
+  
 }

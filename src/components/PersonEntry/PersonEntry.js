@@ -1,28 +1,86 @@
-import React from 'react'
+import axios from 'axios';
 import './PersonEntry.css'
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import Box from '../FingerPrint/FingerPrint';
 import Breadcrumbs from '../../pages/breadcumbs/Breadcrumbs';
 
-// Form.jsx
-
-
-export const Input = ({ label, type, id, placeholder }) => {
+export const Input = ({ label, type, name, placeholder  , onChange ,value }) => {
   return (
     <div className="inputContainer">
       <div className="inputWrapper">
-        <label htmlFor={id} className="label">
+        <label htmlFor={name} className="label">
           {label}
         </label>
       </div>
       <input
-        id={id}
+        name={name}
         type={type}
         className="inputField"
         placeholder={placeholder}
+        value={value}
+        onChange={(e) => onChange(name, e.target.value)}
       />
     </div>
   );
 };
 const PersonEntry = () => {
+
+  const imageUrl = require('../FingerPrint/finger.jpg');
+  // State to manage form data
+  const [formData, setFormData] = useState({
+    name: '',
+    dateofbirth: '',
+    email: '',
+    mobile: '',
+    purpose: '',
+    aadhaar: '',
+    address: ''
+  });
+
+  // Function to handle form input changes
+  const handleInputChange = (name, value) => {
+    console.log(`Handling input for ${name}: ${value}`);
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+
+  // Function to handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      // Define the API endpoint URL
+      const apiUrl = 'http://localhost:4001/Products';
+
+      // Make a POST request using Axios
+      const response = await axios.post(apiUrl, formData);
+
+      // Handle successful response
+      console.log('Form submitted successfully:', response.data);
+      alert('Form submitted successfully:')
+      // Optionally, reset the form after submission
+      setFormData({
+        name: '',
+        dateofbirth: '',
+        email: '',
+        mobile: '',
+        purpose: '',
+        aadhaar: '',
+        address: '',
+        fathern: '',
+      });
+    } catch (error) {
+      // Handle submission error
+      console.error('Error submitting form:', error.message);
+    }
+  };
+
+
+
   return (
     <>
       <div className='first-half'>
@@ -36,95 +94,129 @@ const PersonEntry = () => {
 
         <div className='button-section'>
           <i class="ri-team-fill plus"></i>
-          <button>View Customer</button>
+          <Link to='/list'>
+            <button>View Customer</button>
+          </Link>
+
         </div>
 
       </div>
 
       <section>
         <div className='hero-section'>
+          
           <div className="formContainer">
             <div className='PurposeGrid '>
               <Input
+                onChange={handleInputChange}
                 label="Purpose"
                 type="text"
-                id="purpase"
+                name="purpose"
+                value={formData.purpose}
                 placeholder="Enter Purpose"
               />
             </div>
             <div className="formGrid">
               <Input
+                onChange={handleInputChange}
                 label="Full Name"
                 type="text"
-                id="full name"
+                value={formData.name}
+                name="name"
                 placeholder="Enter Name"
               />
               <Input
+                onChange={handleInputChange}
                 label="Father Name"
                 type="text"
-                id="father"
+                value={formData.fathern}
+                name="fathern"
                 placeholder="Father Name"
               />
               <Input
+                onChange={handleInputChange}
                 label="Date of Birth"
                 type="date"
-                id="date"
+                name="dateofbirth"
                 placeholder=""
+                value={formData.dateofbirth}
               />
 
               <Input
+                onChange={handleInputChange}
                 label="Aadhaar No."
                 type="number"
-                id="Aadhaar"
+                name="aadhaar"
                 placeholder="Aadhaar No."
+                value={formData.aadhaar}
               />
 
               <Input
+                onChange={handleInputChange}
                 label="Mobile No."
                 type="text"
-                id="text"
+                name="mobile"
                 placeholder="Mobile No."
+                value={formData.mobile}
               />
 
 
               <Input
+                onChange={handleInputChange}
                 label="E-mail ID"
                 type="email"
-                id="name"
+                name="email"
                 placeholder="example@update.com"
+                value={formData.email}
               />
 
               <Input
+                onChange={handleInputChange}
                 label="POI"
                 type="file"
-                id="file"
+                name="file"
                 placeholder=""
               />
               <Input
+                onChange={handleInputChange}
                 label="POA"
                 type="file"
-                id="file"
+                name=""
                 placeholder=""
+                value={formData.POA}
               />
               <Input
+                onChange={handleInputChange}
                 label="POB"
                 type="file"
-                id="file"
+                name="POB"
                 placeholder=""
+                value={formData.POB}
               />
 
             
             </div>
             <div className='PurposeGrid Address '>
               <Input
+                onChange={handleInputChange}
                 label="Address"
                 type="text"
-                id="address"
+                name="address"
                 placeholder="House No, Village, City Name, District, State"
+                value={formData.address}
               />
               
             </div>
             
+            <div className="container">
+              <Box Src={imageUrl} buttonText="Click" />
+              <Box Src={imageUrl} buttonText="Click" />
+              <Box Src={imageUrl} buttonText="Click" />
+              <Box Src={imageUrl} buttonText="Click" />
+              <Box Src={imageUrl} buttonText="Click" />
+            </div>
+
+          <div className='Button' onClick={handleSubmit}>Submit</div>
 
           </div>
         </div>

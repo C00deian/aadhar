@@ -12,8 +12,8 @@ width : calc(100% - 4rem);
 .custom-table th,
 .custom-table td {
 
-    padding: 1rem;
-    text-align: left;
+    padding: 10px;
+    text-align: center;
 }
 
 .custom-table th {
@@ -23,9 +23,42 @@ width : calc(100% - 4rem);
 
 tbody tr:nth-child(even) td {
     border: 1px solid #ddd;
+
 }
+
+
 
 tbody tr:nth-child(odd) td {
 
     background-color: #f2f2f2;
+}
+
+
+/* DownLoad Button */
+.Download-Button{
+    border: 1px solid gold;
+    display: flex;
+ 
+}
+
+.list-record {
+
+    color: crimson;
+margin: 2px 0px 5px 23rem;
+    display: block;
+width: 100%;
+position: absolute;
+}
+
+
+
+ .DropDown i {
+ 
+  background-color: blue;
+  color: white;
+border-radius: 50%;
+padding: 2px;
+    position: relative;
+    right: 15px;
+    bottom: 5px;
 }

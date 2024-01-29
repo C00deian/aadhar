@@ -17,12 +17,12 @@ function Breadcrumbs() {
             <Link to="/add-customer"
                 className={location.pathname.startsWith("/add-customer") ? "breadcrumb-active" : "breadcrumb-not-active"}
             >
-                Dashboard<span> <i class="ri-arrow-right-s-line"></i> </span>
+                Add Customer<span> <i class="ri-arrow-right-s-line"></i> </span>
             </Link>
-            <Link to="/products/1"
+            <Link to="/list"
                 className={location.pathname === "/products/1" ? "breadcrumb-active" : "breadcrumb-not-active"}
             >
-                Admin <span>  <i class="ri-arrow-right-s-line"></i> </span>
+                List <span>  <i class="ri-arrow-right-s-line"></i> </span>
             </Link>
         </main>
     );
