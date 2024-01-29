@@ -36,8 +36,9 @@ tbody tr:nth-child(odd) td {
 
 /* DownLoad Button */
 .Download-Button{
-    border: 1px solid gold;
+    /* border: 1px solid gold; */
     display: flex;
+    margin-left: 2rem;
  
 }
 
@@ -62,3 +63,16 @@ padding: 2px;
     right: 15px;
     bottom: 5px;
 }
+
+.title {
+    float: left;
+
+}
+
+
+ .status h3{
+    float:left;
+  padding: 1rem 0px 1rem 0px;
+}
+
+

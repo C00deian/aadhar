@@ -14,6 +14,7 @@ export const Input = ({ label, type, name, placeholder  , onChange ,value }) => 
         </label>
       </div>
       <input
+      
         name={name}
         type={type}
         className="inputField"
@@ -38,6 +39,14 @@ const PersonEntry = () => {
     address: ''
   });
 
+  const [errors, setErrors] = useState({
+    purpose: false,
+    email: false,
+    mobile: false,
+  });
+
+  
+
   // Function to handle form input changes
   const handleInputChange = (name, value) => {
     console.log(`Handling input for ${name}: ${value}`);
@@ -50,7 +59,12 @@ const PersonEntry = () => {
 
   // Function to handle form submission
   const handleSubmit = async (e) => {
+
     e.preventDefault();
+
+    if (!formData.purpose  || !formData.email || !formData.mobile)  {
+      return alert("please filll the blank field first");
+    }
 
     try {
       // Define the API endpoint URL
@@ -108,12 +122,14 @@ const PersonEntry = () => {
           <div className="formContainer">
             <div className='PurposeGrid '>
               <Input
+                
                 onChange={handleInputChange}
                 label="Purpose"
                 type="text"
                 name="purpose"
                 value={formData.purpose}
                 placeholder="Enter Purpose"
+                require
               />
             </div>
             <div className="formGrid">
@@ -216,7 +232,10 @@ const PersonEntry = () => {
               <Box Src={imageUrl} buttonText="Click" />
             </div>
 
-          <div className='Button' onClick={handleSubmit}>Submit</div>
+            <div id="Reciept">
+              <span id="Original" onClick={handleSubmit}> <i class="ri-save-fill" > </i>Submit</span>
+        
+            </div>
 
           </div>
         </div>

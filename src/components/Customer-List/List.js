@@ -8,6 +8,7 @@ import CSVDownloadButton from '../../pages/Download/CSV/CSVDownloadButton';
 import PDFDownloadButton from '../../pages/Download/PDF/PDFDownloadButton';
 import ExcelDownloadButton from '../../pages/Download/ExcelDownloadButton';
 import CopyButton from '../../pages/Download/CopyButton';
+import Slip from '../../components/Slip/Slip'
 
 function List() {
     const [data, setData] = useState([]);
@@ -44,7 +45,7 @@ function List() {
                 </div>
 
                 <div className='button-section'>
-                    <i className={selectedRow !== null ? 'ri-close-fill' : 'ri-add-fill plus'} onClick={() => handleIconClick(null)}></i>
+                    <i class="ri-add-fill plus"></i>
                     <Link to='/add-customer'>
                         <button>Create New</button>
                     </Link>
@@ -92,9 +93,20 @@ function List() {
                                                 <td colSpan="6">
                                                     {/* Dropdown content */}
                                                     <div className="dropdown-content">
-                                                        <p>Sample Content</p>
-                                                        <p>Modify this as needed</p>
+
+                                                        <div className='title'>
+                                                            <h3>Created On :    {item.createdOn} </h3>
+                                                            <div className='status'>
+
+                                                                <h3 >Status</h3>
+                                                            </div>
+
+                                                        </div>
+
+                                                        <Slip />
+
                                                     </div>
+
                                                 </td>
                                             </tr>
                                         )}

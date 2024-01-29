@@ -52,3 +52,10 @@ padding: 2rem 2rem 0rem 2rem;
   padding: 0rem 2rem 2rem 2rem;
 }
 
+ .Button  {
+
+  background-color: #71b944;
+    color: white;
+    padding: 10px;
+}
+

@@ -2,6 +2,7 @@ import React from 'react'
 import './home.css'
 import Breadcrumbs from '../breadcumbs/Breadcrumbs'
 import Footer from '../Footer/Footer'
+import { Link } from 'react-router-dom'
 
 
 const Home = () => {
@@ -20,9 +21,11 @@ const Home = () => {
         </div>
 
         <div className='button-section'>
+         
           <i class="ri-add-fill plus"></i>
+          <Link to='/add-customer'>
           <button>Create New Entry</button>
-
+</Link>
           <i class="ri-add-fill plus"></i>
           <button>Enroll Child</button>
         </div>
