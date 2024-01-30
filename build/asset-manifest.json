@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.dbe372fb.css",
+    "main.js": "/static/js/main.434b3deb.js",
+    "static/media/finger.jpg": "/static/media/finger.a0d9eb90e02636aa1273.jpg",
+    "static/media/profile_3135715.png": "/static/media/profile_3135715.5faf09a7795d28bf5a2b.png",
+    "index.html": "/index.html",
+    "static/media/hamburger.svg": "/static/media/hamburger.953e16a69081114a1fca4a33df87827e.svg",
+    "main.dbe372fb.css.map": "/static/css/main.dbe372fb.css.map",
+    "main.434b3deb.js.map": "/static/js/main.434b3deb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dbe372fb.css",
+    "static/js/main.434b3deb.js"
+  ]
+}
