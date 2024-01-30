@@ -4,6 +4,8 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Box from '../FingerPrint/FingerPrint';
 import Breadcrumbs from '../../pages/breadcumbs/Breadcrumbs';
+import Navbar from '../Navbar/Navbar';
+import Menubar from '../../pages/MenuSidebar/Menubar';
 
 export const Input = ({ label, type, name, placeholder  , onChange ,value }) => {
   return (
@@ -99,6 +101,8 @@ const PersonEntry = () => {
 
   return (
     <>
+      <Menubar />
+      <Navbar/>
       <div className='first-half'>
         <div className='title-section'>
 
