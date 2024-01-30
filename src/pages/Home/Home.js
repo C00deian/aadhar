@@ -3,6 +3,8 @@ import './home.css';
 import Breadcrumbs from '../breadcumbs/Breadcrumbs';
 import Footer from '../Footer/Footer';
 import { Link } from 'react-router-dom';
+import Navbar from '../../components/Navbar/Navbar';
+import Menubar from '../MenuSidebar/Menubar';
 
 const Home = () => {
   const [pointsBalance, setPointsBalance] = useState(0);
@@ -46,6 +48,8 @@ const Home = () => {
 
   return (
     <>
+      <Menubar/>
+      <Navbar/>
       <div className='first-half'>
         <div className='title-section'>
           <p style={{ fontSize: '17px' }}>Dashboard</p>

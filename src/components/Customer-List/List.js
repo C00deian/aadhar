@@ -9,6 +9,8 @@ import PDFDownloadButton from '../../pages/Download/PDF/PDFDownloadButton';
 import ExcelDownloadButton from '../../pages/Download/ExcelDownloadButton';
 import CopyButton from '../../pages/Download/CopyButton';
 import Slip from '../../components/Slip/Slip'
+import Navbar from '../Navbar/Navbar';
+import Menubar from '../../pages/MenuSidebar/Menubar';
 
 function List() {
     const [data, setData] = useState([]);
@@ -36,6 +38,8 @@ function List() {
 
     return (
         <>
+            <Menubar />
+            <Navbar/>
             <div className='first-half'>
                 <div className='title-section'>
                     <p style={{ fontSize: '17px' }}>Dashboard</p>

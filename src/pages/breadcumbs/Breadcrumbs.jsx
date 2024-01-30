@@ -9,8 +9,8 @@ function Breadcrumbs() {
     return (
         <main>
 
-            <Link to="/"
-                className={location.pathname === "/" ? "breadcrumb-active" : "breadcrumb-not-active"}
+            <Link to="/home"
+                className={location.pathname === "/home" ? "breadcrumb-active" : "breadcrumb-not-active"}
             >
                 Home <span><i class="ri-arrow-right-s-line"></i> </span>
             </Link>
