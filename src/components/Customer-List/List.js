@@ -11,26 +11,31 @@ import CopyButton from '../../pages/Download/CopyButton';
 import Slip from '../../components/Slip/Slip'
 import Navbar from '../Navbar/Navbar';
 import Menubar from '../../pages/MenuSidebar/Menubar';
+import Products from '../../pages/Products'
+
 
 function List() {
+
+
+
     const [data, setData] = useState([]);
     const [error, setError] = useState([]);
     const [selectedRow, setSelectedRow] = useState(null);
 
-    useEffect(() => {
-        // Define the API endpoint URL
-        const apiUrl = 'http://localhost:4001/Products';
+    // useEffect(() => {
+    //     // Define the API endpoint URL
+    //     const apiUrl = 'http://localhost:4001/Products';
 
-        // Make a GET request using Axios
-        axios.get(apiUrl)
-            .then(response => {
-                setData(response.data);
-            })
-            .catch(err => {
-                console.log('Something Went Wrong');
-                setError(err);
-            });
-    }, []);
+    //     // Make a GET request using Axios
+    //     axios.get(apiUrl)
+    //         .then(response => {
+    //             setData(response.data);
+    //         })
+    //         .catch(err => {
+    //             console.log('Something Went Wrong');
+    //             setError(err);
+    //         });
+    // }, []);
 
     const handleIconClick = (index) => {
         setSelectedRow(selectedRow === index ? null : index);
@@ -56,7 +61,8 @@ function List() {
                 </div>
             </div>
 
-            {data ? (
+            {/* data */}
+            {Products ? (
                 <section>
                     <div className='hero-section'>
                         <div className='Download-Button'>
@@ -77,7 +83,7 @@ function List() {
                                 </tr>
                             </thead>
                             <tbody>
-                                {data.length > 0 ? data.map((item, index) => (
+                                {Products.length > 0 ? Products.map((item, index) => (
                                     <React.Fragment key={item._id}>
                                         <tr>
                                             <td>
