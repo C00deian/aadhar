@@ -25,11 +25,11 @@ function Breadcrumbs() {
                 List <span>  <i class="ri-arrow-right-s-line"></i> </span>
             </Link>
 
-            <Link to="/update-person/:id"
+            {/* <Link to="/update-person/:id"
                 className={location.pathname === "/update-person/:id" ? "breadcrumb-active" : "breadcrumb-not-active"}
             >
                 update <span><i class="ri-arrow-right-s-line"></i> </span>
-            </Link>
+            </Link> */}
         </main>
     );
 }

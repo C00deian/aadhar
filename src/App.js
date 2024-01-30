@@ -6,7 +6,7 @@ import Home from './pages/Home/Home';
 import PersonEntry from './components/PersonEntry/PersonEntry';
 import Menubar from './pages/MenuSidebar/Menubar';
 import List from './components/Customer-List/List';
-import UpdatePerson from './pages/Update/UpdatePerson';
+
 const Routing = () => {
 
 
@@ -17,7 +17,6 @@ const Routing = () => {
       <Route path="/" element={<Home />} />
       <Route path="/add-customer" element={<PersonEntry />} />
       <Route path="/list" element={<List />} />
-      <Route path="/update-person/:id" element={<UpdatePerson/>} />
     </Routes>
 
   )

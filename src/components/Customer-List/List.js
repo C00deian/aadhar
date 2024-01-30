@@ -78,7 +78,12 @@ function List() {
                                         <tr>
                                             <td>
                                                 <div className='DropDown' onClick={() => handleIconClick(index)}>
-                                                    <i className={selectedRow === index ? 'ri-close-fill' : 'ri-add-fill'}></i>
+                                                    <i className={selectedRow === index ? 'ri-close-fill' : 'ri-add-fill'}
+                                                        style={{
+                                                            backgroundColor: selectedRow === index ? 'red' : 'blue'
+                                                        }}
+                                                    
+                                                    ></i>
                                                 </div>
                                                 {index + 1}
                                             </td>
