@@ -11,7 +11,7 @@ import CopyButton from '../../pages/Download/CopyButton';
 import Slip from '../../components/Slip/Slip'
 import Navbar from '../Navbar/Navbar';
 import Menubar from '../../pages/MenuSidebar/Menubar';
-import Products from '../../pages/Products'
+import Products from '../../pages/Products';
 
 
 function List() {
@@ -44,7 +44,7 @@ function List() {
     return (
         <>
             <Menubar />
-            <Navbar/>
+            <Navbar />
             <div className='first-half'>
                 <div className='title-section'>
                     <p style={{ fontSize: '17px' }}>Dashboard</p>
@@ -67,7 +67,7 @@ function List() {
                     <div className='hero-section'>
                         <div className='Download-Button'>
                             <CopyButton />
-                            <ExcelDownloadButton />
+                            <ExcelDownloadButton fileName='myExcel' jsonData={Products} />
                             <CSVDownloadButton />
                             <PDFDownloadButton />
                         </div>
@@ -82,7 +82,7 @@ function List() {
                                     <th>E-mail ID</th>
                                 </tr>
                             </thead>
-                            
+
                             <tbody>
                                 {Products.length > 0 ? Products.map((item, index) => (
                                     <React.Fragment key={item._id}>
@@ -93,7 +93,7 @@ function List() {
                                                         style={{
                                                             backgroundColor: selectedRow === index ? 'red' : 'blue'
                                                         }}
-                                                    
+
                                                     ></i>
                                                 </div>
                                                 {index + 1}
