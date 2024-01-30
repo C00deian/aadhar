@@ -83,7 +83,7 @@ function List() {
                                                 {index + 1}
                                             </td>
                                             <td>{item.name}</td>
-                                            <td>{item.age}</td>
+                                            <td>{item.dateofbirth}</td>
                                             <td>{item.aadhaar}</td>
                                             <td>{item.mobile}</td>
                                             <td>{item.email}</td>

@@ -107,7 +107,7 @@ overflow-y: auto;
 }
 
 .card-item {
-    margin-top: 35px;
+ margin-top: 5px;
     color: white;
   
 }
@@ -126,4 +126,10 @@ overflow-y: auto;
 
 .card-4 {
     background-color: #ff6067;
+}
+
+.card-number{
+    margin-top: 25px;
+    font-size: 18px;
+    color: white;
 }
