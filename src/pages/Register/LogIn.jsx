@@ -12,9 +12,11 @@ const LogIn = () => {
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
 
-    if (email === "vishal@gmail.com" && password === "vishal") {
+    if (email === "adhaar@gmail.com" && password === "1234") {
       setIsLoggedIn(true);
       navigate("/home");
+
+ 
     } else {
       alert("Invalid credentials. Please try again.");
     }

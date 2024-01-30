@@ -39,7 +39,9 @@ font-family: 'Cantarell', sans-serif;
 }
 
 .Heading {
-    padding: 20px 0px 1px 20px;
+font-size: 2vw;
+    padding: 2rem 2rem 0rem 2rem;
+
 }
 
 button {
@@ -74,11 +76,11 @@ section {
 
 .container {
 
-    margin: 20px;
-    /* border: 1px solid blue; */
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 55px;
+    padding: 2rem 2rem 2rem 2rem;
+        /* border: 1px solid blue; */
+        display: flex;
+        justify-content: space-between;
+    
 }
 
 .card {

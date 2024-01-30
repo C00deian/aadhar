@@ -8,45 +8,60 @@
   height: 48vh;
   padding: 10px;
 }
+
 .Upway h2 {
-      text-align: center;
-        background-color: black;
-        color: white;
-        border-radius: 3px;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.314);
-        font-size: 1.5rem;
-        padding: 9px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.314);
+  font-size: 1.5rem;
+  padding: 9px;
 }
+
 .profile {
+  font-size: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .picture {
-  margin-top: 4vh;
+  margin-top: 1vw;
   width: 70px;
   height: 70px;
-  border: 1px solid black;
   border-radius: 50%;
-  background-color: black;
-  filter: blur(10px);
+ 
 }
+.picture img{
+
+width:100%;
+  height:100%;
+
+}
+
 .info {
   text-align: center;
 
   padding-top: 3vh;
 }
-.info h3,p
-{   opacity: .7;
-    margin: 5px 0;
+
+.info h3,
+p {
+  opacity: .7;
+  margin: 5px 0;
 }
-.wel{
+
+.wel {
   font-size: 18px;
   font-weight: 500;
 }
-.info p:nth-child(odd){
-    color: red;
-    line-height:1.5;
+
+.info p:nth-child(odd) {
+  color: red;
+  line-height: 1.5;
 }
 
+h1{
+  font-weight: bold;
+}
