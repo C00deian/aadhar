@@ -3,15 +3,15 @@
     align-items: center;
     width: 100%;
     margin: 10px 0px 10px 0px;
-
 }
 
-span {
+.button {
     cursor: pointer;
     padding: 10px;
     border-radius: 2px;
     margin-right: 10px;
     transition: background-color 0.3s, color 0.3s;
+    border: none;
 }
 
 #Original {
@@ -43,23 +43,19 @@ span {
     background-color: #267bbf;
 }
 
-
 .pencil {
     background-color: #71b944;
     color: white;
     padding: 10px;
     font-size: 20px;
-
     border-radius: 3px;
-    
 }
 
-.Action{
+.Action {
     display: flex;
-        display: flex;
-            margin-top: 4rem;
+    margin-top: 4rem;
 }
 
-h3{
-        margin-top: 10px;
+h3 {
+    margin-top: 10px;
 }

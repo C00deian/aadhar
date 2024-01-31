@@ -20,7 +20,7 @@ function Breadcrumbs() {
                 Add Customer<span> <i class="ri-arrow-right-s-line"></i> </span>
             </Link>
             <Link to="/list"
-                className={location.pathname === "/products/1" ? "breadcrumb-active" : "breadcrumb-not-active"}
+                className={location.pathname === "/list" ? "breadcrumb-active" : "breadcrumb-not-active"}
             >
                 List <span>  <i class="ri-arrow-right-s-line"></i> </span>
             </Link>

@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import Navbar from '../../components/Navbar/Navbar';
 import Menubar from '../MenuSidebar/Menubar';
 
+
 const Home = () => {
   const [pointsBalance, setPointsBalance] = useState(0);
   const [totalApplications, setTotalApplications] = useState(0);
@@ -52,7 +53,7 @@ const Home = () => {
       <Navbar/>
       <div className='first-half'>
         <div className='title-section'>
-          <p style={{ fontSize: '17px' }}>Dashboard</p>
+          <p className='dashboard' >Dashboard</p>
           <div className='breadcrumb'>
             <Breadcrumbs />
           </div>
@@ -61,10 +62,10 @@ const Home = () => {
         <div className='button-section'>
           <i className="ri-add-fill plus"></i>
           <Link to='/add-customer'>
-            <button>Create New Entry</button>
+            <button className='custom-button create-new'>Create New Entry</button>
           </Link>
           <i className="ri-add-fill plus"></i>
-          <button>Enroll Child</button>
+          <button className='custom-button'>Enroll Child</button>
         </div>
       </div>
 

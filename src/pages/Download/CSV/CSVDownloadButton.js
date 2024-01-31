@@ -33,7 +33,7 @@ const CSVDownloadButton = () => {
 
     return (
         <div className='Csv'>
-            <button onClick={handleDownload}>
+            <button onClick={handleDownload} className='csv-button'>
                 CSV
             </button>
         </div>

@@ -105,17 +105,16 @@ const PersonEntry = () => {
       <Navbar/>
       <div className='first-half'>
         <div className='title-section'>
-
-          <p style={{ fontSize: '17px' }}>Dashboard</p>
+          <p className='dashboard' >Add Customer</p>
           <div className='breadcrumb'>
-            <Breadcrumbs></Breadcrumbs>
+            <Breadcrumbs />
           </div>
         </div>
 
         <div className='button-section'>
           <i class="ri-team-fill plus"></i>
           <Link to='/list'>
-            <button>View Customer</button>
+            <button className='custom-button'>View Customers</button>
           </Link>
 
         </div>
@@ -238,10 +237,12 @@ const PersonEntry = () => {
               <Box Src={imageUrl} buttonText="Click" />
             </div>
 
-            <div id="Reciept">
-              <span id="Original" onClick={handleSubmit}> <i class="ri-save-fill" > </i>Submit</span>
         
-            </div>
+              <button onClick={handleSubmit} className='Submit-button'> <i class="ri-save-fill" > </ i>
+                Submit
+              </button>
+        
+         
 
           </div>
         </div>

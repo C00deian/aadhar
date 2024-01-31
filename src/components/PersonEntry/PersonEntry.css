@@ -20,7 +20,7 @@
 
 .inputField {
   width: 100%;
-  padding:.60rem;
+  padding:.40rem;
   font-weight: 500;
   border: 1px solid slategray;
   border-radius: 0.10rem;
@@ -52,10 +52,20 @@ padding: 2rem 2rem 0rem 2rem;
   padding: 0rem 2rem 2rem 2rem;
 }
 
- .Button  {
+.Submit-button  {
 
-  background-color: #71b944;
-    color: white;
-    padding: 10px;
+        border-radius: 2px;
+          margin-left: 10px;
+          background-color: #71b944;
+          color: white;
+          padding: 8px;
+          width: 7vw;
+          margin: 1rem;
+          float: left;
+            transition: background-color 0.3s, color 0.3s
+}
+
+.Submit-button:hover{
+        background-color: #3f9e04;
 }
 

@@ -47,16 +47,16 @@ function List() {
             <Navbar />
             <div className='first-half'>
                 <div className='title-section'>
-                    <p style={{ fontSize: '17px' }}>Dashboard</p>
+                    <p className='dashboard' >List</p>
                     <div className='breadcrumb'>
-                        <Breadcrumbs></Breadcrumbs>
+                        <Breadcrumbs />
                     </div>
                 </div>
 
                 <div className='button-section'>
                     <i class="ri-add-fill plus"></i>
                     <Link to='/add-customer'>
-                        <button>Create New</button>
+                        <button className='custom-button'>Create New</button>
                     </Link>
                 </div>
             </div>

@@ -4,21 +4,20 @@ import './Slip.css';
 function Slip() {
     return (
         <>
-         
             <div id="Reciept">
-                <span id="Original">Original Slip</span>
-                <span className="Progress">In Progress</span>
+                <button id="Original" className="button">Original Slip</button>
+                <button className="Progress button">In Progress</button>
             </div>
             <div className="AckSlip">
-                <span className="Ackslip">Ack Slip</span>
+                <button className="Ackslip button">Ack Slip</button>
             </div>
 
             <div className='Action'>
-                <h3>Action</h3> <span>
-                    <i class="ri-edit-2-fill pencil"></i>
-                </span>
+                <h3>Action</h3>
+                <button className="button">
+                    <i className="ri-edit-2-fill pencil"></i>
+                </button>
             </div>
-         
         </>
     );
 }
