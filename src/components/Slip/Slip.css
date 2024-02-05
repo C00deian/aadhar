@@ -53,9 +53,11 @@
 
 .Action {
     display: flex;
-    margin-top: 4rem;
+    margin-top: 5rem;
 }
 
-h3 {
+.Action-text {
     margin-top: 10px;
+    font-size: 1rem;
+        font-weight: bold;
 }

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Papa from 'papaparse';
-import './csv.css'
-import products from '../../Products';
+import './downloadformate.css'
+import products from '../Products';
 
 const CSVDownloadButton = () => {
     const [data, setData] = useState([]);
@@ -32,11 +32,9 @@ const CSVDownloadButton = () => {
     };
 
     return (
-        <div className='Csv'>
-            <button onClick={handleDownload} className='csv-button'>
-                CSV
-            </button>
-        </div>
+      <button onClick={handleDownload} className="DownloadFormate-button">
+        CSV
+      </button>
     );
 };
 

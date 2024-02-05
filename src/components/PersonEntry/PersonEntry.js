@@ -123,7 +123,7 @@ const PersonEntry = () => {
 
       <section>
         <div className='hero-section'>
-          
+     
           <div className="formContainer">
             <div className='PurposeGrid '>
               <Input

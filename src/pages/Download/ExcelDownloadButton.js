@@ -21,11 +21,9 @@ const ExcelDownloadButton = ({ jsonData, fileName }) => {
   };
 
   return (
-    <div className='Csv'>
-      <button onClick={convertToExcel} className='csv-button'>
-        Excel
-      </button>
-    </div>
+    <button onClick={convertToExcel} className="DownloadFormate-button">
+      Excel
+    </button>
   );
 }
 export default ExcelDownloadButton;

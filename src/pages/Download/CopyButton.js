@@ -1,13 +1,8 @@
 import React from 'react'
+import './downloadformate.css'
 
 function CopyButton() {
-  return (
-      <div className='Csv'>
-      <button className='csv-button' >
-       Copy
-          </button>
-      </div>
-  )
+  return <button className="DownloadFormate-button">Copy</button>;
 }
 
-export default CopyButton
+export default CopyButton;

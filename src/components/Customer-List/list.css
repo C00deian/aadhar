@@ -38,7 +38,8 @@ tbody tr:nth-child(odd) td {
 .Download-Button{
     /* border: 1px solid gold; */
     display: flex;
-    margin-left: 2rem;
+    margin: 1rem 2rem;
+ 
  
 }
 
@@ -64,15 +65,25 @@ padding: 2px;
     bottom: 5px;
 }
 
-.title {
+.dropdown-title {
     float: left;
-
+    flex-direction: column;
+display: flex;
 }
 
 
- .status h3{
+ .status {
     float:left;
-  padding: 1rem 0px 1rem 0px;
+    font-size: 1rem;
+    font-weight: bold;
+  padding: .50rem 0rem;
+  text-align: start;
+}
+
+.dropdown-content{
+    /* border: 1px solid black; */
+    margin:1rem;
+    /* background-color: whitesmoke; */
 }
 
 
