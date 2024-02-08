@@ -2,19 +2,18 @@ import React, { useEffect, useState } from "react";
 import Table from "react-bootstrap/Table";
 import { Link } from "react-router-dom";
 // import axios from "axios";
-import Breadcrumbs from "../common/breadcumbs/Breadcrumbs";
-import "./list.css";
-import CSVDownloadButton from "../../pages/Download/CSVDownloadButton";
-import PDFDownloadButton from "../../pages/Download/PDFDownloadButton";
-import ExcelDownloadButton from "../../pages/Download/ExcelDownloadButton";
-import CopyButton from "../../pages/Download/CopyButton";
-import Slip from "../../components/Slip/Slip";
-import Navbar from "../Navbar/Navbar";
-import Menubar from "../../pages/MenuSidebar/Menubar";
-import Products from "../../pages/Products";
-import Search from "../SearchFilter/Search";
-import Header from "../../components/common/Header/Header";
-function List() {
+import Breadcrumbs from "../../common/breadcumbs/Breadcrumbs";
+import "./EntryList.css";
+import CSVDownloadButton from "../../../pages/Download/CSVDownloadButton";
+import PDFDownloadButton from "../../../pages/Download/PDFDownloadButton";
+import ExcelDownloadButton from "../../../pages/Download/ExcelDownloadButton";
+import CopyButton from "../../../pages/Download/CopyButton";
+import Navbar from "../../Navbar/Navbar";
+import Menubar from "../../../pages/MenuSidebar/Menubar";
+import Products from "../../../pages/Products";
+import Search from "../../SearchFilter/Search";
+
+function ChildEntryList() {
   //api data fetch
   const [data, setData] = useState([]);
   const [error, setError] = useState([]);
@@ -53,7 +52,7 @@ function List() {
 
         <div className="button-section">
           <i class="ri-add-fill plus"></i>
-          <Link to="/add-customer">
+          <Link to="/new-entry">
             <button className="custom-button">Create New</button>
           </Link>
         </div>
@@ -63,7 +62,6 @@ function List() {
       {Products ? (
         <section>
           <div className="hero-section">
-            <Header />
             <div className="Download-Button">
               <CopyButton />
               <ExcelDownloadButton fileName="myExcel" jsonData={Products} />
@@ -74,12 +72,8 @@ function List() {
             <Table striped bordered hover className="custom-table">
               <thead>
                 <tr>
-                  <th>S.N.</th>
-                  <th>Name</th>
-                  <th>Age</th>
-                  <th>Aadhaar No.</th>
-                  <th>Mobile No.</th>
-                  <th>E-mail ID</th>
+                  <th>S.NO.</th>
+                  <th>Applied By</th>
                 </tr>
               </thead>
 
@@ -96,22 +90,18 @@ function List() {
                             <i
                               className={
                                 selectedRow === index
-                                  ? "ri-close-fill"
-                                  : "ri-add-fill"
+                                  ? "ri-close-fill child"
+                                  : "ri-add-fill child"
                               }
                               style={{
                                 backgroundColor:
                                   selectedRow === index ? "red" : "blue",
                               }}
-                            ></i>
+                            ></i>{" "}
+                            {index + 1}
                           </div>
-                          {index + 1}
                         </td>
                         <td>{item.name}</td>
-                        <td>{item.dateofbirth}</td>
-                        <td>{item.aadhaar}</td>
-                        <td>{item.mobile}</td>
-                        <td>{item.email}</td>
                       </tr>
                       {selectedRow === index && (
                         <tr>
@@ -120,6 +110,32 @@ function List() {
                             <div className="dropdown-content">
                               <div className="dropdown-title">
                                 <h3 className="status">
+                                  {" "}
+                                  Aadhaar Card Details :{" "}
+                                </h3>
+
+                                <span className="span">Name : {item.name}</span>
+                                <span className="span">
+                                  Father Name : {item.dateofbirth}
+                                </span>
+                                <span className="span">
+                                  Aadhaar No : {item.aadhaar}
+                                </span>
+                                <span className="span">
+                                  {" "}
+                                  Mobile No : {item.mobile}
+                                </span>
+                                <span className="span">
+                                  {" "}
+                                  E-mail : {item.email}
+                                </span>
+                                <span className="span">
+                                  {" "}
+                                  Address : {item.address}
+                                </span>
+                                <h3 className="status"> Purpose & Status</h3>
+                                <h3 className="status"> Admin Remark</h3>
+                                <h3 className="status">
                                   Created On :{" "}
                                   <span
                                     style={{ color: "blue", fontSize: "15px" }}
@@ -127,11 +143,13 @@ function List() {
                                     {item.createdOn}
                                   </span>
                                 </h3>
-
-                                <h3 className="status">Status</h3>
+                                <div className="Action">
+                                  <h4 className="Action-text">Action</h4>
+                                  <button className="button">
+                                    <i className="ri-edit-2-fill pencil"></i>
+                                  </button>
+                                </div>
                               </div>
-
-                              <Slip />
                             </div>
                           </td>
                         </tr>
@@ -156,4 +174,4 @@ function List() {
   );
 }
 
-export default List;
+export default ChildEntryList;

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './home.css';
-import Breadcrumbs from '../breadcumbs/Breadcrumbs';
-import Footer from '../Footer/Footer';
+import Button from '../../components/common/Button/Button';
+import Breadcrumbs from '../../components/common/breadcumbs/Breadcrumbs';
+import Footer from '../../components/common/Footer/Footer';
 import { Link } from 'react-router-dom';
 import Navbar from '../../components/Navbar/Navbar';
 import Menubar from '../MenuSidebar/Menubar';
@@ -49,75 +50,62 @@ const Home = () => {
 
   return (
     <>
-      <Menubar/>
-      <Navbar/>
-      <div className='first-half'>
-        <div className='title-section'>
-          <p className='dashboard' >Dashboard</p>
-          <div className='breadcrumb'>
+      <Menubar />
+      <Navbar />
+      <div className="first-half">
+        <div className="title-section">
+          <p className="dashboard">Dashboard</p>
+          <div className="breadcrumb">
             <Breadcrumbs />
           </div>
         </div>
 
-        <div className='button-section'>
-          <i className="ri-add-fill plus"></i>
-          <Link to='/add-customer'>
-            <button className='custom-button create-new'>Create New Entry</button>
-          </Link>
-          <i className="ri-add-fill plus"></i>
-          <button className='custom-button'>Enroll Child</button>
+        <div className="button-section">
+        <Button/>
         </div>
       </div>
 
       <section>
-        <div className='hero-section'>
-          <div className='Heading'>
+        <div className="hero-section">
+          <div className="Heading">
             <h2>Welcome to Retailer Panel</h2>
           </div>
 
-          <div className='container'>
-            <div className='card card-1'>
-              <div className='card-number'>{pointsBalance}</div>
-              <div className='card-item'>Points Balance</div>
-          
+          <div className="container">
+            <div className="card card-1">
+              <div className="card-number">{pointsBalance}</div>
+              <div className="card-item">Points Balance</div>
             </div>
-            <div className='card card-2'>
-              <div className='card-number'>{totalApplications}</div>
-              <div className='card-item'>Total Application</div>
-          
+            <div className="card card-2">
+              <div className="card-number">{totalApplications}</div>
+              <div className="card-item">Total Application</div>
             </div>
-            <div className='card card-3'>
-              <div className='card-number'>{completedApplications}</div>
-              <div className='card-item'>Completed</div>
-          
+            <div className="card card-3">
+              <div className="card-number">{completedApplications}</div>
+              <div className="card-item">Completed</div>
             </div>
-            <div className='card card-4'>
-              <div className='card-number'>{rejectedApplications}</div>
-              <div className='card-item'>Rejected</div>
-            
+            <div className="card card-4">
+              <div className="card-number">{rejectedApplications}</div>
+              <div className="card-item">Rejected</div>
             </div>
           </div>
 
-          <div className='container'>
-            <div className='card card-1'>
-              <div className='card-number'>{childBalance}</div>
-              <div className='card-item'>Child Balance</div>
-       
+          <div className="container">
+            <div className="card card-1">
+              <div className="card-number">{childBalance}</div>
+              <div className="card-item">Child Balance</div>
             </div>
-            <div className='card card-2'>
-              <div className='card-number'>{totalChildApplications}</div>
-              <div className='card-item'>Total Child Application</div>
-             
+            <div className="card card-2">
+              <div className="card-number">{totalChildApplications}</div>
+              <div className="card-item">Total Child Application</div>
             </div>
-            <div className='card card-3'>
-            
-              <div className='card-number'>{totalChildCompleted}</div>
-              <div className='card-item'>Total Child Completed</div>
+            <div className="card card-3">
+              <div className="card-number">{totalChildCompleted}</div>
+              <div className="card-item">Total Child Completed</div>
             </div>
-            <div className='card card-4'>
-            
-              <div className='card-number'>{totalChildRejected}</div>
-              <div className='card-item'>Total Child Rejected</div>
+            <div className="card card-4">
+              <div className="card-number">{totalChildRejected}</div>
+              <div className="card-item">Total Child Rejected</div>
             </div>
           </div>
         </div>

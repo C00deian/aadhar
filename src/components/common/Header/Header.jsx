@@ -1,6 +1,6 @@
 import React from "react";
 
-const costumer = " Devendra";
+const costumer = " Admin";
 
 function Header() {
   return (

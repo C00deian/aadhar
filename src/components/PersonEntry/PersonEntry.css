@@ -13,7 +13,8 @@
 }
 
 .label {
-  font-weight: 400;
+
+  color: #575962;
 
 
 }
@@ -21,12 +22,27 @@
 .inputField {
   width: 100%;
   padding:.40rem;
-  font-weight: 500;
   border: 1px solid slategray;
   border-radius: 0.10rem;
-  opacity: 0.6;
 
 }
+
+.inputField::placeholder{
+
+  color: #7e858b
+}
+
+
+.inputField:focus{
+  border: 1px solid #007bff;
+  /* Example border color when focused */
+  outline: none;
+  /* Remove the default focus outline if not needed */
+  box-shadow: 0 0 2px rgba(0, 123, 255, 0.5);
+  /* Example box shadow when focused */
+}
+
+
 
 .formContainer {
   max-width: 100%;

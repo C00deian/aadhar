@@ -17,7 +17,7 @@ function Downside() {
 
   return (
     <div className="down">
-      <hr/>
+      <hr />
       <ul>
         <li>
           <Link to="">
@@ -71,12 +71,12 @@ function Downside() {
             <ul>
               {/* Add your Child Management dropdown menu items here */}
               <li>
-                <Link href="#">
+                <Link to="/new-entry">
                   <i class="ri-user-add-fill"></i>Enroll Child
                 </Link>
               </li>
               <li>
-                <Link href="#">
+                <Link to="/child-entry-list">
                   <i class="ri-eye-fill"></i>View Child Data
                 </Link>
               </li>

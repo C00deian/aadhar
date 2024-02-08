@@ -1,11 +1,13 @@
 import axios from "axios";
-import "./PersonEntry.css";
+import "./newEntry.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Box from "../FingerPrint/FingerPrint";
-import Breadcrumbs from "../common/breadcumbs/Breadcrumbs";
-import Navbar from "../Navbar/Navbar";
-import Menubar from "../../pages/MenuSidebar/Menubar";
+import Box from "../../FingerPrint/FingerPrint";
+import Breadcrumbs from "../../common/breadcumbs/Breadcrumbs";
+import Navbar from "../../Navbar/Navbar";
+import Menubar from "../../../pages/MenuSidebar/Menubar";
+import Header from "../../common/Header/Header";
+import Information from "../../common/Information/Information";
 
 export const Input = ({ label, type, name, placeholder, onChange, value }) => {
   return (
@@ -26,8 +28,33 @@ export const Input = ({ label, type, name, placeholder, onChange, value }) => {
     </div>
   );
 };
-const PersonEntry = ( ) => {
-  const imageUrl = require("../../assets/icons/finger.jpg");
+
+//Manage Select Box
+export const Select = ({ label, value, options, onChange , name , className}) => {
+  return (
+    <div className="inputContainer">
+      <div className="inputWrapper">
+        <label htmlFor={name} className="label">
+          {label}
+        </label>
+      </div>
+      <select
+        value={value}
+        onChange={onChange}
+        className={className}
+        name={name}
+      >
+        {options.map((option) => (
+          <option value={option.value}>{option.label}</option>
+        ))}
+      </select>
+    </div>
+  );
+};
+
+const NewEntry = () => {
+  const imageUrl = require("../../../assets/icons/finger.jpg");
+
   // State to manage form data
   const [formData, setFormData] = useState({
     name: "",
@@ -37,6 +64,8 @@ const PersonEntry = ( ) => {
     purpose: "",
     aadhaar: "",
     address: "",
+    Gender: "",
+    Parent_aadhaar : ''
   });
 
   const formatCurrentDate = () => {
@@ -101,16 +130,13 @@ const PersonEntry = ( ) => {
       <Menubar />
       <Navbar />
       <div className="first-half">
-        <div className="title-section">
-          <p className="dashboard">Add Customer</p>
-          <div className="breadcrumb">
-            <Breadcrumbs />
-          </div>
+        
+        <div className="child-header">
+          <h4 className="child-header-title">Child Enrollment System</h4>
         </div>
-
         <div className="button-section">
           <i class="ri-team-fill plus"></i>
-          <Link to="/list">
+          <Link to="/child-entry-list">
             <button className="custom-button">View Customers</button>
           </Link>
         </div>
@@ -118,51 +144,123 @@ const PersonEntry = ( ) => {
 
       <section>
         <div className="hero-section">
+    <Information/>
           <div className="formContainer">
-            <div className="PurposeGrid ">
-              <Input
-                onChange={handleInputChange}
-                label="Purpose"
-                type="text"
-                name="purpose"
-                value={formData.purpose}
-                placeholder="Enter Purpose"
-                require
-              />
-            </div>
             <div className="formGrid">
               <Input
                 onChange={handleInputChange}
-                label="Full Name"
+                label="Child Name"
                 type="text"
                 value={formData.name}
                 name="name"
-                placeholder="Enter Name"
-              />
-              <Input
-                onChange={handleInputChange}
-                label="Father Name"
-                type="text"
-                value={formData.fathern}
-                name="fathern"
-                placeholder="Father Name"
-              />
-              <Input
-                onChange={handleInputChange}
-                label="Date of Birth"
-                type="date"
-                name="dateofbirth"
-                placeholder=""
-                value={formData.dateofbirth}
+                placeholder="Full Name"
               />
 
               <Input
                 onChange={handleInputChange}
-                label="Aadhaar No."
+                label="Father Name / Mother Name"
+                type="text"
+                value={formData.Parent_name}
+                name="Parent_name"
+                placeholder="Enter Parents Name"
+              />
+
+              <Input
+                onChange={handleInputChange}
+                label="Date of Birth"
+                type="date"
+                name="DOB"
+                placeholder=""
+                value={formData.DOB}
+              />
+
+              {/* Hindi Name  */}
+              <Input
+                onChange={handleInputChange}
+                type="text"
+                value={formData.name_in_hindi}
+                name="name_in_hindi"
+                placeholder="बच्चे का नाम हिंदी में डालें"
+              />
+
+              <Input
+                onChange={handleInputChange}
+                type="text"
+                value={formData.Parent_name_in_hindi}
+                name="Parent_name_in_hindi"
+                placeholder="माता-पिता का नाम हिन्दी में डालें"
+              />
+
+              {/* For Empty Space in  Spacific row */}
+              <div className="empty-space"></div>
+
+              {/* Selction Input */}
+
+              {/* Gender Selection */}
+
+              <Select
+                label="Child Gender"
+                options={[
+                  { label: "Select Gender", value: "No Gender Selected" },
+                  { label: "Male", value: "Male" },
+                  { label: "Female", value: "Female" },
+                ]}
+                name="Gender"
+                className="inputField select"
+                type="text"
+                value={formData.Gender}
+                onChange={handleInputChange}
+              />
+
+              {/* Parent Selection */}
+
+              <Select
+                label="Select Parent"
+                options={[
+                  { label: "Select Parent", value: "No Parent Selected" },
+                  { label: "Father", value: "Father" },
+                  { label: "Mother", value: "Mother" },
+                ]}
+                name="Parent_aadhaar"
+                className="inputField select"
+                type="text"
+                value={formData.Parent_aadhaar}
+                onChange={handleInputChange}
+              />
+
+              <Input
+                onChange={handleInputChange}
+                label="Father / Mother Aadhaar No"
                 type="number"
-                name="aadhaar"
-                placeholder="Aadhaar No."
+                name="Parent_aadhaar"
+                placeholder="Father / Mother Aadhaar No"
                 value={formData.aadhaar}
+              />
+
+              {/* Document Upload Inputs */}
+              <Input
+                onChange={handleInputChange}
+                label="Upload Birth Proof (Only Pdf allow)"
+                type="file"
+                name="DOB_Proof"
+                placeholder=""
+                value={formData.DOB_Proof}
+              />
+              <Input
+                onChange={handleInputChange}
+                label="Upload Child Photo Pdf*"
+                type="file"
+                name="Child_Photo"
+                placeholder=""
+                value={formData.Child_Photo}
+              />
+              <Input
+                onChange={handleInputChange}
+                label="Upload Form"
+                type="file"
+                name="Form"
+                placeholder=""
+                value={formData.Form}
               />
 
               <Input
@@ -185,36 +283,25 @@ const PersonEntry = ( ) => {
 
               <Input
                 onChange={handleInputChange}
-                label="POI"
-                type="file"
-                name="file"
-                placeholder=""
-              />
-              <Input
-                onChange={handleInputChange}
-                label="POA"
-                type="file"
-                name=""
-                placeholder=""
-                value={formData.POA}
-              />
-              <Input
-                onChange={handleInputChange}
-                label="POB"
-                type="file"
-                name="POB"
-                placeholder=""
-                value={formData.POB}
-              />
-            </div>
-            <div className="PurposeGrid Address ">
-              <Input
-                onChange={handleInputChange}
                 label="Address"
                 type="text"
                 name="address"
                 placeholder="House No, Village, City Name, District, State"
                 value={formData.address}
+              />
+
+              {/* For Empty Space in  Spacific row */}
+
+              <div className="empty-space"></div>
+
+              <div className="empty-space"></div>
+
+              <Input
+                onChange={handleInputChange}
+                type="text"
+                name="Address_in_hindi"
+                placeholder="पता हिन्दी में डालें"
+                value={formData.Address_in_hindi}
               />
             </div>
 
@@ -238,4 +325,4 @@ const PersonEntry = ( ) => {
   );
 };
 
-export default PersonEntry;
+export default NewEntry;
