@@ -9,8 +9,7 @@
         padding: 5px;
 }
 
-.Action {
+.Action-container{
     display: flex;
- 
+    gap: 5px;
 }
-

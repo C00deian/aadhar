@@ -12,6 +12,11 @@ import Navbar from "../../Navbar/Navbar";
 import Menubar from "../../../pages/MenuSidebar/Menubar";
 import Products from "../../../pages/Products";
 import Search from "../../SearchFilter/Search";
+import FingerData from "./Authentication/FingerData";
+import ViewFingerAndUpdate from "./View/ViewFingerAndUpdate";
+import DeleteData from "./Delete/DeleteData";
+import Upload from "./Upload/Upload";
+import Action from "./Action/Action";
 
 function ChildEntryList() {
   //api data fetch
@@ -143,11 +148,13 @@ function ChildEntryList() {
                                     {item.createdOn}
                                   </span>
                                 </h3>
-                                <div className="Action">
-                                  <h4 className="Action-text">Action</h4>
-                                  <button className="button">
-                                    <i className="ri-edit-2-fill pencil"></i>
-                                  </button>
+                                <div className="Action-container">
+                                
+<Action/>
+                                  <FingerData />
+                                  <ViewFingerAndUpdate />
+                                  <DeleteData />
+                                  <Upload/>
                                 </div>
                               </div>
                             </div>
