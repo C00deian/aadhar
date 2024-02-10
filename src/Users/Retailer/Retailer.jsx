@@ -1,10 +1,10 @@
 import React from 'react'
-
+import Home from '../../pages/Home/Home'
 const Retailer = () => {
   return (
-    <div>
-      <h1>Reatiler</h1>
-    </div>
+    <>
+      <Home/> 
+    </>
   )
 }
 

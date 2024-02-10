@@ -16,7 +16,7 @@ const LogIn = () => {
 
   const roles = {
     "Admin Login": { user: "admin", password: "1234", route: "/admin" },
-    "Retailer Login": { user: "admin2", password: "1234", route: "/home" },
+    "Retailer Login": { user: "admin2", password: "1234", route: "/retailer" },
     "Back Office": { user: "admin3", password: "1234", route: "/backoffice" },
   };
 

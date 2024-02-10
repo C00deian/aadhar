@@ -10,6 +10,11 @@ import ChildEntryList from "./components/Child/Entry_List/ChildEntryList";
 import Admin from "./Users/Admin/Admin";
 import Retailer from "./Users/Retailer/Retailer";
 import BackOffice from "./Users/BackOffice/BackOffice";
+
+import DashBoard from "./Users/Admin/DashBoard/DashBoard";
+import Balance from "./Users/Admin/Balance/Balance";
+import History from "./Users/Admin/TansferHistory/History";
+
 const Routing = () => {
   return (
     <Routes>
@@ -27,6 +32,11 @@ const Routing = () => {
       {/* Child Routing */}
       <Route path="/new-entry" element={<NewEntry />} />
       <Route path="/child-entry-list" element={<ChildEntryList />} />
+
+      {/* Content management admin page routing */}
+      <Route path="/dashboard" element={<DashBoard />} />
+      <Route path="/balance" element={<Balance />} />
+      <Route path="/history" element={<History />} />
     </Routes>
   );
 };
