@@ -1,10 +1,12 @@
-import React from "react";
-
- 
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
+import { CSVLink } from "react-csv";
+import { exportComponentAsPDF } from "react-component-export-image";
+
 const History = () => {
-  // Array of product data
-  const products = [
+  const tableRef = useRef(null); // Define tableRef
+
+  const products = [ // Move 'products' array declaration to the top level
     {
       name: 'Admin"',
       color: "500",
@@ -12,50 +14,54 @@ const History = () => {
       price: "Transfer",
       date: "08/01/2024",
     },
-    {
-      name: 'Admin"',
-      color: "500",
-      category: "Rajesh",
-      price: "Transfer",
-      date: "08/01/2024",
-    },
-    {
-      name: 'Admin"',
-      color: "500",
-      category: "Rajesh",
-      price: "Transfer",
-      date: "08/01/2024",
-    },
-    {
-      name: 'Admin"',
-      color: "500",
-      category: "Rajesh",
-      price: "Transfer",
-      date: "08/01/2024",
-    },
-    {
-      name: 'Admin"',
-      color: "500",
-      category: "Rajesh",
-      price: "Transfer",
-      date: "08/01/2024",
-    },
-    {
-      name: 'Admin"',
-      color: "500",
-      category: "Rajesh",
-      price: "Transfer",
-      date: "08/01/2024",
-    },
-    
+    // Other product objects...
   ];
+
+  const copyToClipboard = () => {
+    const el = document.createElement('textarea');
+    el.value = products.map(product => Object.values(product).join('\t')).join('\n');
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+  };
 
   return (
     <>
-       
       <div className="p-4 sm:ml-64 bg-gray-200">
         <div className="p-4 border-2 border-gray-200 border-solid rounded-lg bg-white mt-14">
-          <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+          <div className="flex justify-between mb-4">
+            <div>
+              <button
+                onClick={copyToClipboard}
+                className="px-4 py-2 mr-2 text-sm font-medium text-white bg-blue-600 rounded hover:bg-blue-700"
+              >
+                Copy
+              </button>
+              <button
+                onClick={() =>
+                  tableRef.current.table.download("xlsx", "history.xlsx")
+                }
+                className="px-4 py-2 mr-2 text-sm font-medium text-white bg-green-600 rounded hover:bg-green-700"
+              >
+                Excel
+              </button>
+              <CSVLink
+                data={products}
+                filename={"history.csv"}
+                className="px-4 py-2 mr-2 text-sm font-medium text-white bg-yellow-600 rounded hover:bg-yellow-700"
+              >
+                CSV
+              </CSVLink>
+              <button
+                onClick={() => exportComponentAsPDF(tableRef)}
+                className="px-4 py-2 text-sm font-medium text-white bg-red-600 rounded hover:bg-red-700"
+              >
+                PDF
+              </button>
+            </div>
+          </div>
+          <div className="relative overflow-x-auto shadow-md sm:rounded-lg" ref={tableRef}>
             <table className="w-full text-sm text-left rtl:text-right text-black shadow-sm">
               <thead className="text-xs text-black  bg-white  ">
                 <tr>
@@ -100,7 +106,7 @@ const History = () => {
                     <td className="px-6 py-4 border">{product.date}</td>
                     <td className="px-6 py-4 border">
                       <Link
-                        href="#"
+                        to="#"
                         className="font-medium text-black hover:underline"
                       >
                         Edit
