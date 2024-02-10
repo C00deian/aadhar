@@ -32,7 +32,7 @@ const Forget = () => {
                 id="user"
                 ref={userRef}
               />
-              <i className="ri-user-line absolute right-4 top-1/2 transform -translate-y-1/2"></i>
+              <i className="ri-user-line absolute right-4 top-14 transform -translate-y-1/2"></i>
             </div>
 
             <div className="border-b border-gray-500 pb-[2vh]">

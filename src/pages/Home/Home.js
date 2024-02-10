@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import './home.css';
-import Button from '../../components/common/Button/Button';
-import Breadcrumbs from '../../components/common/breadcumbs/Breadcrumbs';
-import Footer from '../../components/common/Footer/Footer';
-import { Link } from 'react-router-dom';
-import Navbar from '../../components/Navbar/Navbar';
-import Menubar from '../MenuSidebar/Menubar';
+import React, { useState, useEffect } from "react";
+import "./home.css";
+import Button from "../../components/common/Button/Button";
+import Breadcrumbs from "../../components/common/breadcumbs/Breadcrumbs";
+import Footer from "../../components/common/Footer/Footer";
 
+import Navbar from "../../components/Navbar/Navbar";
+import Menubar from "../MenuSidebar/Menubar";
 
 const Home = () => {
   const [pointsBalance, setPointsBalance] = useState(0);
@@ -61,7 +60,7 @@ const Home = () => {
         </div>
 
         <div className="button-section">
-        <Button/>
+          <Button />
         </div>
       </div>
 
