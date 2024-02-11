@@ -56,7 +56,7 @@ const Menudrop = () => {
       <Dropdown
         title="User Management"
         items={[
-          { label: "Add Admin User", link: "/add-admin" },
+          { label: "Add Admin User", link: "/adduser" },
           { label: "View User List", link: "#" },
           { label: "View Retailer User List", link: "#" },
         ]}

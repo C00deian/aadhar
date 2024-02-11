@@ -14,6 +14,7 @@ import BackOffice from "./Users/BackOffice/BackOffice";
 import DashBoard from "./Users/Admin/DashBoard/DashBoard";
 import Balance from "./Users/Admin/Balance/Balance";
 import History from "./Users/Admin/TansferHistory/History";
+import AddAdminUser from "./Users/Admin/UserManagement/AddAdminUser/AddAdminUser";
 
 const Routing = () => {
   return (
@@ -37,6 +38,7 @@ const Routing = () => {
       <Route path="/dashboard" element={<DashBoard />} />
       <Route path="/balance" element={<Balance />} />
       <Route path="/history" element={<History />} />
+      <Route path="/adduser" element={<AddAdminUser />} />
     </Routes>
   );
 };
