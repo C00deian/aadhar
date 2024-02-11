@@ -65,7 +65,7 @@ const Menudrop = () => {
       <Dropdown
         title="Entry Management"
         items={[
-          { label: "New Entry", link: "/newEntry" },
+          { label: "New Entry", link: "/add-customer" },
           { label: "View Entry", link: "#" },
           { label: "Update Form", link: "" },
           { label: "Search Entry Data", link: "#" },

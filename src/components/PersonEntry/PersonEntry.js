@@ -3,9 +3,9 @@ import "./PersonEntry.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Box from "../FingerPrint/FingerPrint";
-import Breadcrumbs from "../common/breadcumbs/Breadcrumbs";
-import Navbar from "../Navbar/Navbar";
-import Menubar from "../../pages/MenuSidebar/Menubar";
+//import Breadcrumbs from "../common/breadcumbs/Breadcrumbs";
+import HeaderNavbar from "../../Users/Admin/HeaderNabar/HeaderNavbar";
+import Asidebar from "../../Users/Admin/Asidebar/Asidebar";
 
 export const Input = ({ label, type, name, placeholder, onChange, value }) => {
   return (
@@ -26,7 +26,7 @@ export const Input = ({ label, type, name, placeholder, onChange, value }) => {
     </div>
   );
 };
-const PersonEntry = ( ) => {
+const PersonEntry = () => {
   const imageUrl = require("../../assets/icons/finger.jpg");
   // State to manage form data
   const [formData, setFormData] = useState({
@@ -98,9 +98,9 @@ const PersonEntry = ( ) => {
 
   return (
     <>
-      <Menubar />
-      <Navbar />
-      <div className="first-half">
+      <HeaderNavbar />
+      <Asidebar />
+      {/* <div className="first-half">
         <div className="title-section">
           <p className="dashboard">Add Customer</p>
           <div className="breadcrumb">
@@ -114,10 +114,9 @@ const PersonEntry = ( ) => {
             <button className="custom-button">View Customers</button>
           </Link>
         </div>
-      </div>
-
-      <section>
-        <div className="hero-section">
+      </div> */}
+      <div className="p-12 sm:ml-72  mb-48 bg-gray-200">
+        <div className="p-4 border-2 rounded-lg mt-14 shadow-xl bg-white">
           <div className="formContainer">
             <div className="PurposeGrid ">
               <Input
@@ -233,7 +232,7 @@ const PersonEntry = ( ) => {
             </button>
           </div>
         </div>
-      </section>
+      </div>
     </>
   );
 };

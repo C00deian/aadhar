@@ -2,15 +2,15 @@ import React, { useEffect, useState } from "react";
 import Table from "react-bootstrap/Table";
 import { Link } from "react-router-dom";
 // import axios from "axios";
-import Breadcrumbs from "../common/breadcumbs/Breadcrumbs";
+//import Breadcrumbs from "../common/breadcumbs/Breadcrumbs";
 import "./list.css";
 import CSVDownloadButton from "../../pages/Download/CSVDownloadButton";
 import PDFDownloadButton from "../../pages/Download/PDFDownloadButton";
 import ExcelDownloadButton from "../../pages/Download/ExcelDownloadButton";
 import CopyButton from "../../pages/Download/CopyButton";
 import Slip from "../../components/Slip/Slip";
-import Navbar from "../Navbar/Navbar";
-import Menubar from "../../pages/MenuSidebar/Menubar";
+import HeaderNavbar from "../../Users/Admin/HeaderNabar/HeaderNavbar";
+import Asidebar from "../../Users/Admin/Asidebar/Asidebar";
 import Products from "../../pages/Products";
 import Search from "../SearchFilter/Search";
 import Header from "../../components/common/Header/Header";
@@ -41,9 +41,9 @@ function List() {
 
   return (
     <>
-      <Menubar />
-      <Navbar />
-      <div className="first-half">
+      <HeaderNavbar />
+      <Asidebar />
+      {/* <div className="first-half">
         <div className="title-section">
           <p className="dashboard">List</p>
           <div className="breadcrumb">
@@ -57,12 +57,12 @@ function List() {
             <button className="custom-button">Create New</button>
           </Link>
         </div>
-      </div>
+      </div> */}
 
       {/* data */}
       {Products ? (
-        <section>
-          <div className="hero-section">
+        <div className="p-12 sm:ml-72  mb-48 bg-gray-200">
+          <div className="p-4 border-2 rounded-lg mt-5 bg-white">
             <Header />
             <div className="Download-Button">
               <CopyButton />
@@ -148,7 +148,7 @@ function List() {
               </tbody>
             </Table>
           </div>
-        </section>
+        </div>
       ) : (
         <p>Please Wait...</p>
       )}
