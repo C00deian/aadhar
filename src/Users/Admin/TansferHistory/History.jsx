@@ -2,28 +2,78 @@ import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import { CSVLink } from "react-csv";
 import { exportComponentAsPDF } from "react-component-export-image";
+ 
+import Search from "../../../components/SearchFilter/Search";
 
 const History = () => {
-  const tableRef = useRef(null); // Define tableRef
+  // Define and initialize the tableRef
+  const tableRef = useRef(null);
 
-  const products = [ // Move 'products' array declaration to the top level
+  // Define products array
+  const products = [
     {
-      name: 'Admin"',
-      color: "500",
-      category: "Rajesh",
-      price: "Transfer",
+      debitedFrom: 'Admin',
+      tranferPoint: "500",
+      creditedTo: "Rajesh",
+      status: "Transfer",
       date: "08/01/2024",
+    },
+    {
+      debitedFrom: 'Admin',
+      tranferPoint: "800",
+      creditedTo: "Jitendar",
+      status: "Transfer",
+      date: "03/01/2024",
+    },
+    {
+      debitedFrom: 'Admin',
+      tranferPoint: "5000",
+      creditedTo: " Mukesh",
+      status: "Transfer",
+      date: "08/02/2024",
+    },
+    {
+      debitedFrom: 'Admin',
+      tranferPoint: "300",
+      creditedTo: "Divakar",
+      status: "Transfer",
+      date: "31/01/2024",
+    },
+    {
+      debitedFrom: 'Admin',
+      tranferPoint: "200",
+      creditedTo: "Priyanka",
+      status: "Transfer",
+      date: "22/01/2023",
     },
     // Other product objects...
   ];
 
+  // Function to copy data to clipboard
   const copyToClipboard = () => {
-    const el = document.createElement('textarea');
-    el.value = products.map(product => Object.values(product).join('\t')).join('\n');
+    const el = document.createElement("textarea");
+    el.value = products
+      .map((product) => Object.values(product).join("\t"))
+      .join("\n");
     document.body.appendChild(el);
     el.select();
-    document.execCommand('copy');
+    document.execCommand("copy");
     document.body.removeChild(el);
+  };
+
+  // Function to export table data to Excel
+  const exportToExcel = () => {
+    try {
+      // Check if tableRef and tableRef.current exist before calling the download method
+      if (tableRef.current && tableRef.current.table) {
+        console.log("Exporting to Excel...");
+        tableRef.current.table.download("xlsx", "history.xlsx");
+      } else {
+        console.error("Table or table ref is not defined");
+      }
+    } catch (error) {
+      console.error("Error exporting to Excel:", error);
+    }
   };
 
   return (
@@ -34,36 +84,40 @@ const History = () => {
             <div>
               <button
                 onClick={copyToClipboard}
-                className="px-4 py-2 mr-2 text-sm font-medium text-white bg-blue-600 rounded hover:bg-blue-700"
+                className="px-4 py-2 mr-2 text-sm font-medium text-white bg-purple-600 rounded hover:bg-blue-700"
               >
                 Copy
               </button>
               <button
-                onClick={() =>
-                  tableRef.current.table.download("xlsx", "history.xlsx")
-                }
-                className="px-4 py-2 mr-2 text-sm font-medium text-white bg-green-600 rounded hover:bg-green-700"
+                onClick={exportToExcel}
+                className="px-4 py-2 mr-2 text-sm font-medium text-white bg-purple-600 rounded hover:bg-green-700"
               >
                 Excel
               </button>
-              <CSVLink
-                data={products}
-                filename={"history.csv"}
-                className="px-4 py-2 mr-2 text-sm font-medium text-white bg-yellow-600 rounded hover:bg-yellow-700"
-              >
-                CSV
-              </CSVLink>
+              <button className="px-4 py-2 mr-2 text-sm font-medium text-white bg-purple-600 rounded hover:bg-yellow-700">
+                <CSVLink
+                  data={products}
+                  filename={"history.csv"}
+                  className=" no-underline text-white"
+                >
+                  CSV
+                </CSVLink>
+              </button>
               <button
                 onClick={() => exportComponentAsPDF(tableRef)}
-                className="px-4 py-2 text-sm font-medium text-white bg-red-600 rounded hover:bg-red-700"
+                className="px-4 py-2 text-sm font-medium text-white bg-purple-600 rounded hover:bg-red-700 "
               >
                 PDF
               </button>
             </div>
+            <Search/>
           </div>
-          <div className="relative overflow-x-auto shadow-md sm:rounded-lg" ref={tableRef}>
-            <table className="w-full text-sm text-left rtl:text-right text-black shadow-sm">
-              <thead className="text-xs text-black  bg-white  ">
+          <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+            <table
+              className="w-full text-sm text-left rtl:text-right text-black shadow-sm"
+              ref={tableRef}
+            >
+              <thead className="text-base text-black  bg-white  ">
                 <tr>
                   <th scope="col" className="px-2 py-3 border">
                     Serial No.
@@ -83,35 +137,24 @@ const History = () => {
                   <th scope="col" className="px-6 py-3 border">
                     Created On
                   </th>
-                  <th scope="col" className="px-6 py-3 border">
-                    Action
-                  </th>
                 </tr>
               </thead>
               <tbody>
                 {products.map((product, index) => (
                   <tr
                     key={index}
-                    className={index % 2 === 0 ? "bg-gray-300" : "bg-white"}
+                    className={index % 2 === 0 ? "bg-gray-400" : "bg-white"}
                   >
                     <td className="px-6 py-4 font-medium text-black whitespace-nowrap dark:text-white border ">
                       {index + 1}
                     </td>
                     <td className="px-6 py-4 font-medium text-black whitespace-nowrap dark:text-white border">
-                      {product.name}
+                      {product.debitedFrom}
                     </td>
-                    <td className="px-6 py-4 border">{product.color}</td>
-                    <td className="px-6 py-4 border">{product.category}</td>
-                    <td className="px-6 py-4 border">{product.price}</td>
+                    <td className="px-6 py-4 border">{product.tranferPoint}</td>
+                    <td className="px-6 py-4 border">{product.creditedTo}</td>
+                    <td className="px-6 py-4 border">{product.status}</td>
                     <td className="px-6 py-4 border">{product.date}</td>
-                    <td className="px-6 py-4 border">
-                      <Link
-                        to="#"
-                        className="font-medium text-black hover:underline"
-                      >
-                        Edit
-                      </Link>
-                    </td>
                   </tr>
                 ))}
               </tbody>
