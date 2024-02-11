@@ -15,6 +15,7 @@ import DashBoard from "./Users/Admin/DashBoard/DashBoard";
 import Balance from "./Users/Admin/Balance/Balance";
 import History from "./Users/Admin/TansferHistory/History";
 import AddAdminUser from "./Users/Admin/UserManagement/AddAdminUser/AddAdminUser";
+import ViewUser from "./Users/Admin/UserManagement/View User List/ViewUser";
 
 const Routing = () => {
   return (
@@ -39,6 +40,8 @@ const Routing = () => {
       <Route path="/balance" element={<Balance />} />
       <Route path="/history" element={<History />} />
       <Route path="/adduser" element={<AddAdminUser />} />
+      <Route path="/viewuser" element={<ViewUser />} />
+      
     </Routes>
   );
 };

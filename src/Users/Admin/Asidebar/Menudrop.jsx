@@ -57,7 +57,7 @@ const Menudrop = () => {
         title="User Management"
         items={[
           { label: "Add Admin User", link: "/adduser" },
-          { label: "View User List", link: "#" },
+          { label: "View User List", link: "/viewuser" },
           { label: "View Retailer User List", link: "#" },
         ]}
         iconClass="ri-command-fill w-5 h-5 text-black transition duration-75   group-hover:text-gray-900  "
