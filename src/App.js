@@ -16,6 +16,7 @@ import Balance from "./Users/Admin/Balance/Balance";
 import History from "./Users/Admin/TansferHistory/History";
 import AddAdminUser from "./Users/Admin/UserManagement/AddAdminUser/AddAdminUser";
 import ViewUser from "./Users/Admin/UserManagement/View User List/ViewUser";
+import ViewRetailerUserList from "./Users/Admin/UserManagement/ViewRetailerUserList/ViewRetailerUserList";
 
 const Routing = () => {
   return (
@@ -41,6 +42,7 @@ const Routing = () => {
       <Route path="/history" element={<History />} />
       <Route path="/adduser" element={<AddAdminUser />} />
       <Route path="/viewuser" element={<ViewUser />} />
+      <Route path="/viewretaileruserlist" element={< ViewRetailerUserList />} />
       
     </Routes>
   );

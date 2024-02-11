@@ -58,7 +58,7 @@ const Menudrop = () => {
         items={[
           { label: "Add Admin User", link: "/adduser" },
           { label: "View User List", link: "/viewuser" },
-          { label: "View Retailer User List", link: "#" },
+          { label: "View Retailer User List", link: "/viewretaileruserlist" },
         ]}
         iconClass="ri-command-fill w-5 h-5 text-black transition duration-75   group-hover:text-gray-900  "
       />
