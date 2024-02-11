@@ -66,7 +66,7 @@ const Menudrop = () => {
         title="Entry Management"
         items={[
           { label: "New Entry", link: "/add-customer" },
-          { label: "View Entry", link: "#" },
+          { label: "View Entry", link: "/list" },
           { label: "Update Form", link: "" },
           { label: "Search Entry Data", link: "#" },
         ]}
@@ -76,7 +76,7 @@ const Menudrop = () => {
         title="Child Management"
         items={[
           { label: "Enroll Child", link: "/new-entry" },
-          { label: "View Child Data", link: "#" },
+          { label: "View Child Data", link: "/child-entry-list" },
           { label: "View Child Entry", link: "#" },
           { label: "Enrollment Form", link: "#" },
         ]}

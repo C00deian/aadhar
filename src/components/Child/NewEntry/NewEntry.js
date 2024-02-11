@@ -4,8 +4,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Box from "../../FingerPrint/FingerPrint";
 import Breadcrumbs from "../../common/breadcumbs/Breadcrumbs";
-import Navbar from "../../Navbar/Navbar";
-import Menubar from "../../../pages/MenuSidebar/Menubar";
+import HeaderNavbar from "../../../Users/Admin/HeaderNabar/HeaderNavbar";
+import Asidebar from "../../../Users/Admin/Asidebar/Asidebar";
 import Header from "../../common/Header/Header";
 import Information from "../../common/Information/Information";
 
@@ -30,7 +30,14 @@ export const Input = ({ label, type, name, placeholder, onChange, value }) => {
 };
 
 //Manage Select Box
-export const Select = ({ label, value, options, onChange , name , className}) => {
+export const Select = ({
+  label,
+  value,
+  options,
+  onChange,
+  name,
+  className,
+}) => {
   return (
     <div className="inputContainer">
       <div className="inputWrapper">
@@ -65,7 +72,7 @@ const NewEntry = () => {
     aadhaar: "",
     address: "",
     Gender: "",
-    Parent_aadhaar : ''
+    Parent_aadhaar: "",
   });
 
   const formatCurrentDate = () => {
@@ -127,9 +134,9 @@ const NewEntry = () => {
 
   return (
     <>
-      <Menubar />
-      <Navbar />
-      <div className="first-half">
+      <HeaderNavbar />
+      <Asidebar />
+      {/* <div className="first-half">
         
         <div className="child-header">
           <h4 className="child-header-title">Child Enrollment System</h4>
@@ -140,11 +147,10 @@ const NewEntry = () => {
             <button className="custom-button">View Customers</button>
           </Link>
         </div>
-      </div>
-
-      <section>
-        <div className="hero-section">
-    <Information/>
+      </div> */}
+      <div className="p-12 sm:ml-72  mb-48 bg-gray-200">
+        <div className="p-4 border-2 rounded-lg mt-14 shadow-xl bg-white">
+          <Information />
           <div className="formContainer">
             <div className="formGrid">
               <Input
@@ -320,7 +326,7 @@ const NewEntry = () => {
             </button>
           </div>
         </div>
-      </section>
+      </div>
     </>
   );
 };
