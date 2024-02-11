@@ -18,6 +18,10 @@ import AddAdminUser from "./Users/Admin/UserManagement/AddAdminUser/AddAdminUser
 import ViewUser from "./Users/Admin/UserManagement/View User List/ViewUser";
 import ViewRetailerUserList from "./Users/Admin/UserManagement/ViewRetailerUserList/ViewRetailerUserList";
 
+import MobileUpdate from "./Users/Admin/MobileManagement/MobileUpdate/MobileUpdate";
+import MobileData from "./Users/Admin/MobileManagement/MobileData/MobileData";
+import AdminReport from "./Users/Admin/MobileManagement/AdminReport/AdminReport";
+
 const Routing = () => {
   return (
     <Routes>
@@ -40,10 +44,14 @@ const Routing = () => {
       <Route path="/dashboard" element={<DashBoard />} />
       <Route path="/balance" element={<Balance />} />
       <Route path="/history" element={<History />} />
+      {/* user management */}
       <Route path="/adduser" element={<AddAdminUser />} />
       <Route path="/viewuser" element={<ViewUser />} />
-      <Route path="/viewretaileruserlist" element={< ViewRetailerUserList />} />
-      
+      <Route path="/viewretaileruserlist" element={<ViewRetailerUserList />} />
+      {/* mobile managemnt */}
+      <Route path="/mobileupdate" element={<MobileUpdate />} />
+      <Route path="/mobiledata" element={<MobileData />} />
+      <Route path="/adminreport" element={<AdminReport />} />
     </Routes>
   );
 };

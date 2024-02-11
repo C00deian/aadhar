@@ -85,9 +85,9 @@ const Menudrop = () => {
       <Dropdown
         title="Mobile Management"
         items={[
-          { label: "Mobile Update", link: "/mobile" },
-          { label: "Mobile Data", link: "#" },
-          { label: "Admin Report", link: "#" },
+          { label: "Mobile Update", link: "/mobileupdate" },
+          { label: "Mobile Data", link: "/mobiledata" },
+          { label: "Admin Report", link: "/adminreport" },
         ]}
         iconClass="ri-smartphone-fill w-5 h-5  text-black transition duration-75   group-hover:text-gray-900  "
       />
