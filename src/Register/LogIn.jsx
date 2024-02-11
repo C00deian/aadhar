@@ -15,7 +15,7 @@ const LogIn = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   const roles = {
-    "Admin Login": { user: "admin", password: "1234", route: "/admin" },
+    "Admin Login": { user: "admin", password: "1234", route: "/dashboard" },
     "Retailer Login": { user: "admin2", password: "1234", route: "/retailer" },
     "Back Office": { user: "admin3", password: "1234", route: "/backoffice" },
   };

@@ -1,13 +1,17 @@
 import React from "react";
+import Asidebar from "../Asidebar/Asidebar";
+import HeaderNavbar from "../HeaderNabar/HeaderNavbar";
 
 const DashBoard = () => {
   return (
     <>
-      <div className="p-4 sm:ml-64">
-        <div className="p-4 border-2 border-gray-200 border-solid rounded-sm bg-white  mt-14">
+    <HeaderNavbar/>
+    <Asidebar/>
+      <div className="p-4 sm:ml-72">
+        <div className="p-4 border-2 border-gray-200 border-solid rounded-sm bg-gray-300  mt-14">
           {/* Wallent and user */}
           <div>
-            <div className="flex items-center justify-center h-48 mb-4 rounded bg-slate-300 border-1">
+            <div className="flex items-center justify-center h-48 mb-4 rounded bg-white border-1">
               <p className="text-3xl text-black font-bold ">Wallet & Users</p>
             </div>
             <div className="grid grid-cols-2 gap-4 mb-4">
@@ -25,7 +29,7 @@ const DashBoard = () => {
           {/* Demographic System Management */}
 
           <div>
-            <div className="flex items-center justify-center h-48 mb-4 rounded bg-slate-300 border-1">
+            <div className="flex items-center justify-center h-48 mb-4 rounded bg-white border-1">
               <p className="text-3xl  text-black font-bold">
                 Demographic System Management
               </p>
@@ -47,7 +51,7 @@ const DashBoard = () => {
           </div>
           {/* Child System Management */}
           <div>
-            <div className="flex items-center justify-center h-48 mb-4 rounded bg-slate-300 border-1">
+            <div className="flex items-center justify-center h-48 mb-4 rounded bg-white border-1">
               <p className="text-3xl  text-black font-bold  ">
                 Child System Management
               </p>
@@ -70,7 +74,7 @@ const DashBoard = () => {
             </div>
             {/* Mobile System Management */}
             <div>
-              <div className="flex items-center justify-center h-48 mb-4 rounded bg-slate-300 border-1">
+              <div className="flex items-center justify-center h-48 mb-4 rounded bg-white border-1">
                 <p className="text-3xl  text-black font-semibold  ">
                   Mobile System Management
                 </p>

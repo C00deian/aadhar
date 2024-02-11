@@ -2,7 +2,8 @@ import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import { CSVLink } from "react-csv";
 import { exportComponentAsPDF } from "react-component-export-image";
- 
+import Asidebar from "../Asidebar/Asidebar";
+import HeaderNavbar from "../HeaderNabar/HeaderNavbar";
 import Search from "../../../components/SearchFilter/Search";
 
 const History = () => {
@@ -12,35 +13,35 @@ const History = () => {
   // Define products array
   const products = [
     {
-      debitedFrom: 'Admin',
+      debitedFrom: "Admin",
       tranferPoint: "500",
       creditedTo: "Rajesh",
       status: "Transfer",
       date: "08/01/2024",
     },
     {
-      debitedFrom: 'Admin',
+      debitedFrom: "Admin",
       tranferPoint: "800",
       creditedTo: "Jitendar",
       status: "Transfer",
       date: "03/01/2024",
     },
     {
-      debitedFrom: 'Admin',
+      debitedFrom: "Admin",
       tranferPoint: "5000",
       creditedTo: " Mukesh",
       status: "Transfer",
       date: "08/02/2024",
     },
     {
-      debitedFrom: 'Admin',
+      debitedFrom: "Admin",
       tranferPoint: "300",
       creditedTo: "Divakar",
       status: "Transfer",
       date: "31/01/2024",
     },
     {
-      debitedFrom: 'Admin',
+      debitedFrom: "Admin",
       tranferPoint: "200",
       creditedTo: "Priyanka",
       status: "Transfer",
@@ -78,9 +79,11 @@ const History = () => {
 
   return (
     <>
-      <div className="p-4 sm:ml-64 bg-gray-200">
+      <HeaderNavbar />
+      <Asidebar />
+      <div className="p-4 sm:ml-72 bg-gray-200">
         <div className="p-4 border-2 border-gray-200 border-solid rounded-lg bg-white mt-14">
-          <div className="flex justify-between mb-4">
+          <div className="flex items-center justify-between mb-4">
             <div>
               <button
                 onClick={copyToClipboard}
@@ -110,7 +113,7 @@ const History = () => {
                 PDF
               </button>
             </div>
-            <Search/>
+            <Search />
           </div>
           <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
             <table

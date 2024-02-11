@@ -1,9 +1,13 @@
 import React from "react";
+import Asidebar from "../Asidebar/Asidebar";
+import HeaderNavbar from "../HeaderNabar/HeaderNavbar";
 
 const Balance = () => {
   return (
     <>
-      <div className="p-12 sm:ml-64  mb-48 bg-gray-200">
+     <HeaderNavbar/>
+    <Asidebar/>
+      <div className="p-12 sm:ml-72  mb-48 bg-gray-200">
         <div className="p-4 border-2 rounded-lg mt-14 shadow-xl bg-white">
           <div className="grid grid-cols-1 gap-4 mb-4 ">
             <h3 className="text-2xl font-bold">Balance Transfer</h3>

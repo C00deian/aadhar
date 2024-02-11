@@ -1,67 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Menudrop from "./Menudrop";
+import MenuItems from "./MenuItems";
 import "remixicon/fonts/remixicon.css";
+import "./Asidebar.css";
 
 const Asidebar = () => {
-  const menuItems = [
-    {
-      link: "/dashboard",
-      iconClass: "ri-layout-grid-fill",
-      label: "Dashboard",
-    },
-    {
-      link: "/balance",
-      iconClass: "ri-exchange-dollar-fill",
-      label: "Token Transfer",
-    },
-    {
-      link: "/balance",
-      iconClass: "ri-hourglass-2-fill",
-      label: "User Limit",
-    },
-    {
-      link: "/history",
-      iconClass: "ri-history-fill",
-      label: "Transfer History",
-    },
-  ];
   return (
     <>
       <>
         <aside
           id="separator-sidebar"
-          className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
-          
+          className="fixed top-0 left-0 z-40 w-72 h-screen transition-transform -translate-x-full sm:translate-x-0 mt-14  "
           aria-label="Sidebar"
         >
-          <div className="h-full  py-4 overflow-y-auto bg-white shadow-xl" style={{ WebkitScrollbar: { display: 'none' } }}>
-            {/* Single menus are here */}
-            <ul className="space-y-2 font-medium text-lg pl-5">
-              <span className="text-gray-400 text-xl">Main</span>
-              {menuItems.map((item, index) => (
-                <li key={index}>
-                  <Link
-                    to={`${item.link}`}
-                    className="flex items-center p-2 text-black rounded-lg   hover:bg-gray-200  no-underline hover:text-white"
-                  >
-                    <i
-                      className={`${item.iconClass} w-5 h-5 text-black transition duration-75   group-hover:text-white `}
-                    ></i>
-                    <span className="ms-3">{item.label}</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
+          <div className="h-full py-4    shadow-2xl" id="tomakescrolldisable">
+            <MenuItems />
 
-            {/* DropDown menus are here */}
-
-            <ul className="pt-4 mt-4 space-y-2 font-medium border-t border-gray-200 pl-5  ">
+            <ul className="px-2 py-2 mt-4 space-y-2 font-medium border-t border-gray-400    ">
               <Menudrop />
             </ul>
 
-            {/* Last log out functionality is here */}
-            <ul className="pt-4 mt-4 space-y-2 font-medium border-t border-gray-200 pl-5">
+            <ul className="px-2 mt-4 space-y-2 font-medium border-t border-gray-400 py-2">
               <li>
                 <Link
                   to="/"
