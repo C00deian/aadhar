@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Asidebar from "../../Asidebar/Asidebar" // Import the component you want to show/hide
 
 const LeftNav = () => {
+  const [showOtherComponent, setShowOtherComponent] = useState(false);
+
+  const toggleOtherComponent = () => {
+    setShowOtherComponent(!showOtherComponent);
+  };
+
   return (
     <>
       <div className="flex items-center justify-start rtl:justify-end">
@@ -11,6 +18,7 @@ const LeftNav = () => {
           aria-controls="logo-sidebar"
           type="button"
           className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          onClick={toggleOtherComponent} // Add onClick handler to toggle visibility
         >
           <span className="sr-only">Open sidebar</span>
           <svg
@@ -33,9 +41,9 @@ const LeftNav = () => {
             className="me-3   h-8 w-12 object-cover "
             alt=" Aadhar Logo"
           />
-          
         </Link>
       </div>
+      {showOtherComponent && <Asidebar/>} {/* Conditionally render the other component */}
     </>
   );
 };
