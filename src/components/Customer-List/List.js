@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Table from "react-bootstrap/Table";
 import { Link } from "react-router-dom";
 // import axios from "axios";
-//import Breadcrumbs from "../common/breadcumbs/Breadcrumbs";
+import Breadcrumb from "../../Users/Admin/BreadCrumb/Breadcrumb";
 import "./list.css";
 import CSVDownloadButton from "../../pages/Download/CSVDownloadButton";
 import PDFDownloadButton from "../../pages/Download/PDFDownloadButton";
@@ -15,6 +15,11 @@ import Products from "../../pages/Products";
 import Search from "../SearchFilter/Search";
 import Header from "../../components/common/Header/Header";
 function List() {
+  const title = "View Entry";
+  const links = [
+    { title: "Home", href: "/dashboard" },
+    { title: "View Entry", href: "" },
+  ];
   //api data fetch
   const [data, setData] = useState([]);
   const [error, setError] = useState([]);
@@ -43,21 +48,7 @@ function List() {
     <>
       <HeaderNavbar />
       <Asidebar />
-      {/* <div className="first-half">
-        <div className="title-section">
-          <p className="dashboard">List</p>
-          <div className="breadcrumb">
-            <Breadcrumbs />
-          </div>
-        </div>
-
-        <div className="button-section">
-          <i class="ri-add-fill plus"></i>
-          <Link to="/add-customer">
-            <button className="custom-button">Create New</button>
-          </Link>
-        </div>
-      </div> */}
+      <Breadcrumb title={title} links={links} />
 
       {/* data */}
       {Products ? (

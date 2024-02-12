@@ -5,8 +5,15 @@ import { exportComponentAsPDF } from "react-component-export-image";
 import Asidebar from "../../Asidebar/Asidebar";
 import HeaderNavbar from "../../HeaderNabar/HeaderNavbar";
 import Search from "../../../../components/SearchFilter/Search";
+import Breadcrumb from "../../BreadCrumb/Breadcrumb";
 
 const ViewUser = () => {
+  const title = "View User Data";
+  const links = [
+    { title: "Home", href: "/dashboard" },
+    { title: "View User Data ", href: "" },
+     
+  ];
   // Define and initialize the tableRef
   const tableRef = useRef(null);
 
@@ -156,6 +163,7 @@ const ViewUser = () => {
     <>
       <HeaderNavbar />
       <Asidebar />
+      <Breadcrumb title={title} links={links} />
       <div className="p-4 sm:ml-72 bg-gray-200">
         <div className="p-4 border-2 border-gray-200 border-solid rounded-lg bg-white mt-14">
         <h3 className="text-2xl font-bold">View User Data-ADMIN</h3> 

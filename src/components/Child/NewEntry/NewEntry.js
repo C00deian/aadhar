@@ -3,7 +3,7 @@ import "./newEntry.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Box from "../../FingerPrint/FingerPrint";
-import Breadcrumbs from "../../common/breadcumbs/Breadcrumbs";
+import Breadcrumb from "../../../Users/Admin/BreadCrumb/Breadcrumb";
 import HeaderNavbar from "../../../Users/Admin/HeaderNabar/HeaderNavbar";
 import Asidebar from "../../../Users/Admin/Asidebar/Asidebar";
 import Header from "../../common/Header/Header";
@@ -60,6 +60,12 @@ export const Select = ({
 };
 
 const NewEntry = () => {
+  const title = "Child Enrollment System";
+  const links = [
+    { title: "Home", href: "/dashboard" },
+    { title: "Child Enrollment System", href: "" },
+     
+  ];
   const imageUrl = require("../../../assets/icons/finger.jpg");
 
   // State to manage form data
@@ -136,17 +142,8 @@ const NewEntry = () => {
     <>
       <HeaderNavbar />
       <Asidebar />
-      <div className="first-half">
-        <div className="child-header">
-          <h4 className="child-header-title">Child Enrollment System</h4>
-        </div>
-        <div className="button-section">
-          <i class="ri-team-fill plus"></i>
-          <Link to="/child-entry-list">
-            <button className="custom-button">View Customers</button>
-          </Link>
-        </div>
-      </div>
+      <Breadcrumb title={title} links={links} />
+       
       <div className="p-12 sm:ml-72  mb-48 bg-gray-200">
         <div className="p-4 border-2 rounded-lg  shadow-xl bg-white">
           <Information />

@@ -5,8 +5,15 @@ import { exportComponentAsPDF } from "react-component-export-image";
 import Asidebar from "../Asidebar/Asidebar";
 import HeaderNavbar from "../HeaderNabar/HeaderNavbar";
 import Search from "../../../components/SearchFilter/Search";
+import Breadcrumb from "../BreadCrumb/Breadcrumb";
 
 const History = () => {
+  const title = "View Balance Transfer History";
+  const links = [
+    { title: "Home", href: "/dashboard" },
+    { title: "View Balance Transfer History", href: "" },
+     
+  ];
   // Define and initialize the tableRef
   const tableRef = useRef(null);
 
@@ -81,6 +88,7 @@ const History = () => {
     <>
       <HeaderNavbar />
       <Asidebar />
+      <Breadcrumb title={title} links={links} />
       <div className="p-4 sm:ml-72 bg-gray-200">
         <div className="p-4 border-2 border-gray-200 border-solid rounded-lg bg-white mt-14">
           <div className="flex items-center justify-between mb-4">

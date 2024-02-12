@@ -4,10 +4,17 @@ import HeaderNavbar from "../HeaderNabar/HeaderNavbar";
 import Breadcrumb from "../BreadCrumb/Breadcrumb";
 
 const DashBoard = () => {
+
+  const title = "Dashboard";
+  const links = [
+    { title: "Home", href: "/dashboard" },
+    { title: "Dashboard", href: "/dashboard" },
+    { title: "Admin" },
+  ];
   return (
     <>
     <HeaderNavbar/>
-    <Breadcrumb/>
+    <Breadcrumb title={title} links={links} />
     <Asidebar/>
       <div className="p-4 sm:ml-72 bg-gray-200">
         <div className="p-4 border-2 border-gray-200 border-solid rounded-md bg-white  mt-7">

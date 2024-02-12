@@ -2,12 +2,20 @@ import React from "react";
 import Navbar from "../../HeaderNabar/HeaderNavbar";
 import Asidebar from "../../Asidebar/Asidebar";
 import FingerPrint from "../../../../components/FingerPrint/FingerPrint";
+import Breadcrumb from "../../BreadCrumb/Breadcrumb";
 
 const MobileUpdate = () => {
+  const title = "Mobile Update";
+  const links = [
+    { title: "Home", href: "/dashboard" },
+    { title: "Mobile Update", href: "" },
+     
+  ];
   return (
     <div>
       <Navbar />
       <Asidebar />
+      <Breadcrumb title={title} links={links} />
       <div className="p-4 sm:ml-72 mb-32 bg-gray-300">
         <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg   mt-14 bg-white">
           <h3 className="text-2xl font-bold ml-10">Mobile Upadate</h3>

@@ -5,8 +5,15 @@ import { exportComponentAsPDF } from "react-component-export-image";
 import Asidebar from "../../HeaderNabar/HeaderNavbar";
 import HeaderNavbar from "../../Asidebar/Asidebar";
 import Search from "../../../../components/SearchFilter/Search";
+import Breadcrumb from "../../BreadCrumb/Breadcrumb";
 
 const  MobileData = () => {
+  const title = "Mobile Data";
+  const links = [
+    { title: "Home", href: "/dashboard" },
+    { title: "Mobile Data", href: "" },
+     
+  ];
   // Define and initialize the tableRef
   const tableRef = useRef(null);
 
@@ -56,6 +63,7 @@ const  MobileData = () => {
     <>
       <HeaderNavbar />
       <Asidebar />
+      <Breadcrumb title={title} links={links} />
       <div className="p-4 sm:ml-72 bg-gray-200">
         <div className="p-4 border-2 border-gray-200 border-solid rounded-lg bg-white mt-14">
         <h3 className="text-2xl font-bold">ADMIN</h3> 

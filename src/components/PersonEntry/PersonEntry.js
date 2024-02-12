@@ -3,7 +3,7 @@ import "./PersonEntry.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Box from "../FingerPrint/FingerPrint";
-//import Breadcrumbs from "../common/breadcumbs/Breadcrumbs";
+import Breadcrumb from "../../Users/Admin/BreadCrumb/Breadcrumb";
 import HeaderNavbar from "../../Users/Admin/HeaderNabar/HeaderNavbar";
 import Asidebar from "../../Users/Admin/Asidebar/Asidebar";
 
@@ -27,6 +27,11 @@ export const Input = ({ label, type, name, placeholder, onChange, value }) => {
   );
 };
 const PersonEntry = () => {
+  const title = "Add Customer";
+  const links = [
+    { title: "Home", href: "/dashboard" },
+    { title: "Add Customer", href: "" },
+  ];
   const imageUrl = require("../../assets/icons/finger.jpg");
   // State to manage form data
   const [formData, setFormData] = useState({
@@ -100,21 +105,8 @@ const PersonEntry = () => {
     <>
       <HeaderNavbar />
       <Asidebar />
-      {/* <div className="first-half">
-        <div className="title-section">
-          <p className="dashboard">Add Customer</p>
-          <div className="breadcrumb">
-            <Breadcrumbs />
-          </div>
-        </div>
+      <Breadcrumb title={title} links={links} />
 
-        <div className="button-section">
-          <i class="ri-team-fill plus"></i>
-          <Link to="/list">
-            <button className="custom-button">View Customers</button>
-          </Link>
-        </div>
-      </div> */}
       <div className="p-12 sm:ml-72  mb-48 bg-gray-200">
         <div className="p-4 border-2 rounded-lg mt-14 shadow-xl bg-white">
           <div className="PurposeGrid ">

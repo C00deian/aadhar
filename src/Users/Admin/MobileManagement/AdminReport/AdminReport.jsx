@@ -5,8 +5,15 @@ import { exportComponentAsPDF } from "react-component-export-image";
 import HeaderNavbar from "../../HeaderNabar/HeaderNavbar"; // Corrected import
 import Asidebar from "../../Asidebar/Asidebar"; // Corrected import
 import Search from "../../../../components/SearchFilter/Search";
+import Breadcrumb from "../../BreadCrumb/Breadcrumb";
 
 const AdminReport = () => {
+  const title = "Mobile Update-Report";
+  const links = [
+    { title: "Home", href: "/dashboard" },
+    { title: "Mobile Update-Report", href: "" },
+     
+  ];
   const tableRef = useRef(null);
 
   const products = [
@@ -55,6 +62,7 @@ const AdminReport = () => {
     <>
       <HeaderNavbar />
       <Asidebar />
+      <Breadcrumb title={title} links={links} />
       <div className="p-4 sm:ml-72 bg-gray-200">
         <div className="p-4 border-2 border-gray-200 border-solid rounded-lg bg-white mt-14">
           <h3 className="text-2xl font-bold">ADMIN</h3>

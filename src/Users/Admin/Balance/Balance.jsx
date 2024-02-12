@@ -1,12 +1,20 @@
 import React from "react";
 import Asidebar from "../Asidebar/Asidebar";
 import HeaderNavbar from "../HeaderNabar/HeaderNavbar";
+import Breadcrumb from "../BreadCrumb/Breadcrumb";
 
 const Balance = () => {
+  const title = "Balance Transfer";
+  const links = [
+    { title: "Home", href: "/dashboard" },
+    { title: "Balance Transfer", href: "" },
+     
+  ];
   return (
     <>
      <HeaderNavbar/>
     <Asidebar/>
+    <Breadcrumb title={title} links={links} />
       <div className="p-12 sm:ml-72  mb-48 bg-gray-200">
         <div className="p-4 border-2 rounded-lg mt-14 shadow-xl bg-white">
           <div className="grid grid-cols-1 gap-4 mb-4 ">

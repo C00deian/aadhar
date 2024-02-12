@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Table from "react-bootstrap/Table";
 import { Link } from "react-router-dom";
 // import axios from "axios";
-import Breadcrumbs from "../../common/breadcumbs/Breadcrumbs";
+import Breadcrumb from "../../../Users/Admin/BreadCrumb/Breadcrumb";
 import "./EntryList.css";
 import CSVDownloadButton from "../../../pages/Download/CSVDownloadButton";
 import PDFDownloadButton from "../../../pages/Download/PDFDownloadButton";
@@ -19,6 +19,11 @@ import Upload from "./Upload/Upload";
 import Action from "./Action/Action";
 
 function ChildEntryList() {
+  const title = "View Child Data";
+  const links = [
+    { title: "Home", href: "/dashboard" },
+    { title: "View Child Data", href: "" },
+  ];
   //api data fetch
   const [data, setData] = useState([]);
   const [error, setError] = useState([]);
@@ -47,26 +52,12 @@ function ChildEntryList() {
     <>
       <HeaderNavbar />
       <Asidebar />
-      {/* <div className="first-half">
-        <div className="title-section">
-          <p className="dashboard">List</p>
-          <div className="breadcrumb">
-            <Breadcrumbs />
-          </div>
-        </div>
-
-        <div className="button-section">
-          <i class="ri-add-fill plus"></i>
-          <Link to="/new-entry">
-            <button className="custom-button">Create New</button>
-          </Link>
-        </div>
-      </div> */}
+      <Breadcrumb title={title} links={links} />
 
       {/* data */}
       {Products ? (
         <div className="p-12 sm:ml-72  mb-48 bg-gray-200">
-          <div className="p-4 border-2 rounded-lg mt-14 shadow-xl bg-white">
+          <div className="p-4 border-2 rounded-lg  shadow-xl bg-white">
             <div className="Download-Button">
               <CopyButton />
               <ExcelDownloadButton fileName="myExcel" jsonData={Products} />

@@ -1,6 +1,7 @@
 import React from "react";
 import HeaderNavbar from "../../HeaderNabar/HeaderNavbar";
 import Asidebar from "../../Asidebar/Asidebar";
+import Breadcrumb from "../../BreadCrumb/Breadcrumb";
 
 const InputField = ({ label, id, type, placeholder, pattern, required }) => {
   return (
@@ -24,10 +25,17 @@ const InputField = ({ label, id, type, placeholder, pattern, required }) => {
 };
 
 const AddAdminUser = () => {
+  const title = " Add User";
+  const links = [
+    { title: "Home", href: "/dashboard" },
+    { title: "Add User", href: "" },
+     
+  ];
   return (
     <>
       <HeaderNavbar />
       <Asidebar />
+      <Breadcrumb title={title} links={links} />
       <div className="p-4 sm:ml-72 bg-gray-300">
         <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg mt-14 bg-white">
           <h3 className="text-2xl font-bold ml-10">Add Customer</h3>
