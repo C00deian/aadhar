@@ -56,7 +56,7 @@ const LogIn = () => {
         <p>You are already logged in.</p>
       ) : (
         <div className="max-w-[350px] mx-auto  w-screen h-screen">
-          <div className="flex flex-col items-center pt-[10vh]">
+          <div className="flex flex-col items-center pt-[5vh]">
             <img
               src={require("../Register/loginlogo.webp")}
               className="object-cover w-1/2 h-1/2 mb-[5vh]"
@@ -67,7 +67,7 @@ const LogIn = () => {
                 <label htmlFor="user">Username</label>
                 <input
                   type="text"
-                  className="w-full px-6 py-3 mb-5 border border-slate-600 rounded-lg font-medium"
+                  className="w-full px-6 py-3 mb-4 border border-black rounded-lg font-medium"
                   placeholder="Username"
                   id="user"
                   name="user"
@@ -82,7 +82,7 @@ const LogIn = () => {
                 <label htmlFor="password">Password</label>
                 <input
                   type={showPassword ? "text" : "password"}
-                  className="w-full px-6 py-3 mb-5 border border-slate-600 rounded-lg font-medium"
+                  className="w-full px-6 py-3 mb-4 border border-black rounded-lg font-medium"
                   placeholder="Password"
                   id="password"
                   name="password"
@@ -100,7 +100,7 @@ const LogIn = () => {
 
               <label htmlFor="role">Role</label>
               <select
-                className="w-full px-6 py-3 mb-10 border border-slate-600 rounded-lg font-medium"
+                className="w-full px-6 py-3 mb-16 border border-black rounded-lg font-medium "
                 id="role"
                 name="role"
                 value={formData.role}
@@ -114,7 +114,7 @@ const LogIn = () => {
               <div className="flex justify-between items-center gap-2 mt-2 border-b border-gray-500 pb-[2vh]">
                 <Link
                   to="/forget"
-                  className="bg-black hover:bg-slate-800 text-white text-base rounded-lg py-2.5 px-3 transition-colors w-2/3 no-underline"
+                  className="bg-black hover:bg-slate-500 text-white text-base rounded-lg py-2.5 px-3 transition-colors w-2/3 no-underline"
                 >
                   Forgot Password
                 </Link>
@@ -124,9 +124,9 @@ const LogIn = () => {
               </div>
             </form>
 
-            <p className="bg-blue-700 text-white p-3 mt-[7vh] w-full text-center rounded-lg text-xl">
+            <h5 className=" bg-green-400 p-3 mt-[4vh] w-full text-center rounded-lg text-xl text-white font-bold">
               Copyright © 2022 newupdateseva
-            </p>
+            </h5>
           </div>
 
           {showAlert && <StyledAlert onClose={closeAlert} />}
