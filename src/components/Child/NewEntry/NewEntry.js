@@ -136,8 +136,7 @@ const NewEntry = () => {
     <>
       <HeaderNavbar />
       <Asidebar />
-      {/* <div className="first-half">
-        
+      <div className="first-half">
         <div className="child-header">
           <h4 className="child-header-title">Child Enrollment System</h4>
         </div>
@@ -147,184 +146,183 @@ const NewEntry = () => {
             <button className="custom-button">View Customers</button>
           </Link>
         </div>
-      </div> */}
+      </div>
       <div className="p-12 sm:ml-72  mb-48 bg-gray-200">
-        <div className="p-4 border-2 rounded-lg mt-14 shadow-xl bg-white">
+        <div className="p-4 border-2 rounded-lg  shadow-xl bg-white">
           <Information />
-          <div className="formContainer">
-            <div className="formGrid">
-              <Input
-                onChange={handleInputChange}
-                label="Child Name"
-                type="text"
-                value={formData.name}
-                name="name"
-                placeholder="Full Name"
-              />
 
-              <Input
-                onChange={handleInputChange}
-                label="Father Name / Mother Name"
-                type="text"
-                value={formData.Parent_name}
-                name="Parent_name"
-                placeholder="Enter Parents Name"
-              />
+          <div className="formGrid">
+            <Input
+              onChange={handleInputChange}
+              label="Child Name"
+              type="text"
+              value={formData.name}
+              name="name"
+              placeholder="Full Name"
+            />
 
-              <Input
-                onChange={handleInputChange}
-                label="Date of Birth"
-                type="date"
-                name="DOB"
-                placeholder=""
-                value={formData.DOB}
-              />
+            <Input
+              onChange={handleInputChange}
+              label="Father Name / Mother Name"
+              type="text"
+              value={formData.Parent_name}
+              name="Parent_name"
+              placeholder="Enter Parents Name"
+            />
 
-              {/* Hindi Name  */}
-              <Input
-                onChange={handleInputChange}
-                type="text"
-                value={formData.name_in_hindi}
-                name="name_in_hindi"
-                placeholder="बच्चे का नाम हिंदी में डालें"
-              />
+            <Input
+              onChange={handleInputChange}
+              label="Date of Birth"
+              type="date"
+              name="DOB"
+              placeholder=""
+              value={formData.DOB}
+            />
 
-              <Input
-                onChange={handleInputChange}
-                type="text"
-                value={formData.Parent_name_in_hindi}
-                name="Parent_name_in_hindi"
-                placeholder="माता-पिता का नाम हिन्दी में डालें"
-              />
+            {/* Hindi Name  */}
+            <Input
+              onChange={handleInputChange}
+              type="text"
+              value={formData.name_in_hindi}
+              name="name_in_hindi"
+              placeholder="बच्चे का नाम हिंदी में डालें"
+            />
 
-              {/* For Empty Space in  Spacific row */}
-              <div className="empty-space"></div>
+            <Input
+              onChange={handleInputChange}
+              type="text"
+              value={formData.Parent_name_in_hindi}
+              name="Parent_name_in_hindi"
+              placeholder="माता-पिता का नाम हिन्दी में डालें"
+            />
 
-              {/* Selction Input */}
+            {/* For Empty Space in  Spacific row */}
+            <div className="empty-space"></div>
 
-              {/* Gender Selection */}
+            {/* Selction Input */}
 
-              <Select
-                label="Child Gender"
-                options={[
-                  { label: "Select Gender", value: "No Gender Selected" },
-                  { label: "Male", value: "Male" },
-                  { label: "Female", value: "Female" },
-                ]}
-                name="Gender"
-                className="inputField select"
-                type="text"
-                value={formData.Gender}
-                onChange={handleInputChange}
-              />
+            {/* Gender Selection */}
 
-              {/* Parent Selection */}
+            <Select
+              label="Child Gender"
+              options={[
+                { label: "Select Gender", value: "No Gender Selected" },
+                { label: "Male", value: "Male" },
+                { label: "Female", value: "Female" },
+              ]}
+              name="Gender"
+              className="inputField select"
+              type="text"
+              value={formData.Gender}
+              onChange={handleInputChange}
+            />
 
-              <Select
-                label="Select Parent"
-                options={[
-                  { label: "Select Parent", value: "No Parent Selected" },
-                  { label: "Father", value: "Father" },
-                  { label: "Mother", value: "Mother" },
-                ]}
-                name="Parent_aadhaar"
-                className="inputField select"
-                type="text"
-                value={formData.Parent_aadhaar}
-                onChange={handleInputChange}
-              />
+            {/* Parent Selection */}
 
-              <Input
-                onChange={handleInputChange}
-                label="Father / Mother Aadhaar No"
-                type="number"
-                name="Parent_aadhaar"
-                placeholder="Father / Mother Aadhaar No"
-                value={formData.aadhaar}
-              />
+            <Select
+              label="Select Parent"
+              options={[
+                { label: "Select Parent", value: "No Parent Selected" },
+                { label: "Father", value: "Father" },
+                { label: "Mother", value: "Mother" },
+              ]}
+              name="Parent_aadhaar"
+              className="inputField select"
+              type="text"
+              value={formData.Parent_aadhaar}
+              onChange={handleInputChange}
+            />
 
-              {/* Document Upload Inputs */}
-              <Input
-                onChange={handleInputChange}
-                label="Upload Birth Proof (Only Pdf allow)"
-                type="file"
-                name="DOB_Proof"
-                placeholder=""
-                value={formData.DOB_Proof}
-              />
-              <Input
-                onChange={handleInputChange}
-                label="Upload Child Photo Pdf*"
-                type="file"
-                name="Child_Photo"
-                placeholder=""
-                value={formData.Child_Photo}
-              />
-              <Input
-                onChange={handleInputChange}
-                label="Upload Form"
-                type="file"
-                name="Form"
-                placeholder=""
-                value={formData.Form}
-              />
+            <Input
+              onChange={handleInputChange}
+              label="Father / Mother Aadhaar No"
+              type="number"
+              name="Parent_aadhaar"
+              placeholder="Father / Mother Aadhaar No"
+              value={formData.aadhaar}
+            />
 
-              <Input
-                onChange={handleInputChange}
-                label="Mobile No."
-                type="text"
-                name="mobile"
-                placeholder="Mobile No."
-                value={formData.mobile}
-              />
+            {/* Document Upload Inputs */}
+            <Input
+              onChange={handleInputChange}
+              label="Upload Birth Proof (Only Pdf allow)"
+              type="file"
+              name="DOB_Proof"
+              placeholder=""
+              value={formData.DOB_Proof}
+            />
+            <Input
+              onChange={handleInputChange}
+              label="Upload Child Photo Pdf*"
+              type="file"
+              name="Child_Photo"
+              placeholder=""
+              value={formData.Child_Photo}
+            />
+            <Input
+              onChange={handleInputChange}
+              label="Upload Form"
+              type="file"
+              name="Form"
+              placeholder=""
+              value={formData.Form}
+            />
 
-              <Input
-                onChange={handleInputChange}
-                label="E-mail ID"
-                type="email"
-                name="email"
-                placeholder="example@update.com"
-                value={formData.email}
-              />
+            <Input
+              onChange={handleInputChange}
+              label="Mobile No."
+              type="text"
+              name="mobile"
+              placeholder="Mobile No."
+              value={formData.mobile}
+            />
 
-              <Input
-                onChange={handleInputChange}
-                label="Address"
-                type="text"
-                name="address"
-                placeholder="House No, Village, City Name, District, State"
-                value={formData.address}
-              />
+            <Input
+              onChange={handleInputChange}
+              label="E-mail ID"
+              type="email"
+              name="email"
+              placeholder="example@update.com"
+              value={formData.email}
+            />
 
-              {/* For Empty Space in  Spacific row */}
+            <Input
+              onChange={handleInputChange}
+              label="Address"
+              type="text"
+              name="address"
+              placeholder="House No, Village, City Name, District, State"
+              value={formData.address}
+            />
 
-              <div className="empty-space"></div>
+            {/* For Empty Space in  Spacific row */}
 
-              <div className="empty-space"></div>
+            <div className="empty-space"></div>
 
-              <Input
-                onChange={handleInputChange}
-                type="text"
-                name="Address_in_hindi"
-                placeholder="पता हिन्दी में डालें"
-                value={formData.Address_in_hindi}
-              />
-            </div>
+            <div className="empty-space"></div>
 
-            <div className="container">
-              <Box Src={imageUrl} buttonText="Click" />
-              <Box Src={imageUrl} buttonText="Click" />
-              <Box Src={imageUrl} buttonText="Click" />
-              <Box Src={imageUrl} buttonText="Click" />
-              <Box Src={imageUrl} buttonText="Click" />
-            </div>
-
-            <button onClick={handleSubmit} className="Submit-button">
-              {" "}
-              <i class="ri-save-fill"> </i>
-              Submit
-            </button>
+            <Input
+              onChange={handleInputChange}
+              type="text"
+              name="Address_in_hindi"
+              placeholder="पता हिन्दी में डालें"
+              value={formData.Address_in_hindi}
+            />
           </div>
+
+          <div className="container">
+            <Box Src={imageUrl} buttonText="Click" />
+            <Box Src={imageUrl} buttonText="Click" />
+            <Box Src={imageUrl} buttonText="Click" />
+            <Box Src={imageUrl} buttonText="Click" />
+            <Box Src={imageUrl} buttonText="Click" />
+          </div>
+
+          <button onClick={handleSubmit} className="Submit-button">
+            {" "}
+            <i class="ri-save-fill"> </i>
+            Submit
+          </button>
         </div>
       </div>
     </>

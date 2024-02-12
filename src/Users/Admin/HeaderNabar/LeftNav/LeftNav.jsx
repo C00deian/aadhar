@@ -30,7 +30,7 @@ const LeftNav = () => {
         <Link to="" className="flex ms-2 md:me-24">
           <img
             src="https://uidai.gov.in/images/langPage/Page-1.svg "
-            className="me-3   h-10 w-12 object-cover "
+            className="me-3   h-8 w-12 object-cover "
             alt=" Aadhar Logo"
           />
           
