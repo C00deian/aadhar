@@ -6,11 +6,11 @@ const Breadcrumb = ({ title, links }) => {
     <>
       <div className=" sm:ml-72 ">
         <div
-          className="flex   mt-16   h-28 bg-white px-4 py-4 shadow-sm  items-center justify-between"
+          className="flex   mt-16   h-24 bg-white px-4 py-4 shadow-sm  items-center justify-between"
           aria-label="Breadcrumb"
         >
           <div>
-            <h3 className="text-gray-800 mb-3">{title}</h3>
+            <h4 className="text-gray-800 mb-3">{title}</h4>
             <ol className="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
               {links.map((link, index) => (
                 <li key={index} className="inline-flex items-center">
