@@ -31,11 +31,18 @@ const AddAdminUser = () => {
     { title: "Add User", href: "" },
      
   ];
+  const mylinks = [
+    {
+      to: "/viewuser",
+      text: "View Customer",
+      icon: "ri-team-line text-white text-2xl ",
+    },
+  ];
   return (
     <>
       <HeaderNavbar />
       <Asidebar />
-      <Breadcrumb title={title} links={links} />
+      <Breadcrumb title={title} links={links} mylinks={mylinks} />
       <div className="p-4 sm:ml-72 bg-gray-300">
         <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg mt-14 bg-white">
           <h3 className="text-2xl font-bold ml-10">Add Customer</h3>

@@ -41,7 +41,7 @@ const RightNav = () => {
               onMouseLeave={handleMouseLeave}
             >
               <div className="px-4 py-3">
-                <p className="text-base text-gray-900  ">Admin</p>
+                <p className="text-base text-gray-900">Admin</p>
                 <IPAddress />
               </div>
               <ul className="py-1">

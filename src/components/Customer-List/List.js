@@ -20,6 +20,13 @@ function List() {
     { title: "Home", href: "/dashboard" },
     { title: "View Entry", href: "" },
   ];
+  const mylinks = [
+    {
+      to: "/add-customer",
+      text: "Create New ",
+      icon: "ri-add-line text-white text-2xl ",
+    },
+  ];
   //api data fetch
   const [data, setData] = useState([]);
   const [error, setError] = useState([]);
@@ -48,7 +55,7 @@ function List() {
     <>
       <HeaderNavbar />
       <Asidebar />
-      <Breadcrumb title={title} links={links} />
+      <Breadcrumb title={title} links={links} mylinks={mylinks} />
 
       {/* data */}
       {Products ? (

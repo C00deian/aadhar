@@ -4,18 +4,25 @@ import HeaderNavbar from "../HeaderNabar/HeaderNavbar";
 import Breadcrumb from "../BreadCrumb/Breadcrumb";
 
 const DashBoard = () => {
-
   const title = "Dashboard";
   const links = [
     { title: "Home", href: "/dashboard" },
     { title: "Dashboard", href: "/dashboard" },
     { title: "Admin" },
   ];
+  const mylinks = [
+    {
+      to: "/adduser",
+      text: "Create New User",
+      icon: "ri-add-line text-white text-2xl ",
+    },
+  ];
+
   return (
     <>
-    <HeaderNavbar/>
-    <Breadcrumb title={title} links={links} />
-    <Asidebar/>
+      <HeaderNavbar />
+      <Breadcrumb title={title} links={links} mylinks={mylinks} />
+      <Asidebar />
       <div className="p-4 sm:ml-72 bg-gray-200">
         <div className="p-4 border-2 border-gray-200 border-solid rounded-md bg-white  mt-7">
           {/* Wallent and user */}

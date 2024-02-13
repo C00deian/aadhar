@@ -32,6 +32,13 @@ const PersonEntry = () => {
     { title: "Home", href: "/dashboard" },
     { title: "Add Customer", href: "" },
   ];
+  const mylinks = [
+    {
+      to: "/list",
+      text: "View Customer",
+      icon: "ri-team-line text-white text-2xl ",
+    },
+  ];
   const imageUrl = require("../../assets/icons/finger.jpg");
   // State to manage form data
   const [formData, setFormData] = useState({
@@ -105,7 +112,7 @@ const PersonEntry = () => {
     <>
       <HeaderNavbar />
       <Asidebar />
-      <Breadcrumb title={title} links={links} />
+      <Breadcrumb title={title} links={links} mylinks={mylinks} />
 
       <div className="p-12 sm:ml-72  mb-48 bg-gray-200">
         <div className="p-4 border-2 rounded-lg mt-14 shadow-xl bg-white">

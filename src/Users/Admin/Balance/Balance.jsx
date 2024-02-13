@@ -10,11 +10,18 @@ const Balance = () => {
     { title: "Balance Transfer", href: "" },
      
   ];
+  const mylinks = [
+    {
+      to: "/viewuser",
+      text: "View Customer",
+      icon: "ri-team-line text-white text-2xl ",
+    },
+  ];
   return (
     <>
      <HeaderNavbar/>
     <Asidebar/>
-    <Breadcrumb title={title} links={links} />
+    <Breadcrumb title={title} links={links} mylinks={mylinks}/>
       <div className="p-12 sm:ml-72  mb-48 bg-gray-200">
         <div className="p-4 border-2 rounded-lg mt-14 shadow-xl bg-white">
           <div className="grid grid-cols-1 gap-4 mb-4 ">

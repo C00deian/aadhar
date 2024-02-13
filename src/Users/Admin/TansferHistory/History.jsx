@@ -14,6 +14,7 @@ const History = () => {
     { title: "View Balance Transfer History", href: "" },
      
   ];
+ 
   // Define and initialize the tableRef
   const tableRef = useRef(null);
 

@@ -11,11 +11,18 @@ const MobileUpdate = () => {
     { title: "Mobile Update", href: "" },
      
   ];
+  const mylinks = [
+    {
+      to: "/mobileupdate",
+      text: "View Customer",
+      icon: "ri-team-line text-white text-2xl ",
+    },
+  ];
   return (
     <div>
       <Navbar />
       <Asidebar />
-      <Breadcrumb title={title} links={links} />
+      <Breadcrumb title={title} links={links} mylinks={mylinks}/>
       <div className="p-4 sm:ml-72 mb-32 bg-gray-300">
         <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg   mt-14 bg-white">
           <h3 className="text-2xl font-bold ml-10">Mobile Upadate</h3>

@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Breadcrumb = ({ title, links }) => {
+const Breadcrumb = ({ title, links, mylinks }) => {
   return (
     <>
-      <div className=" sm:ml-72 ">
+      <div className="sm:ml-72">
         <div
-          className="flex   mt-16   h-24 bg-white px-4 py-4 shadow-sm  items-center justify-between"
+          className="flex mt-16 h-24 bg-white px-4 py-4 shadow-sm items-center justify-between"
           aria-label="Breadcrumb"
         >
           <div>
@@ -35,7 +35,13 @@ const Breadcrumb = ({ title, links }) => {
               ))}
             </ol>
           </div>
-          <div></div>
+          <div className="flex items-center gap-3">
+            {mylinks && mylinks.length > 0 && mylinks.map((link, index) => (
+              <Link key={index} to={link.to} className=" bg-green-600 no-underline text-white rounded-full border-1 px-3 py-2 hover:bg-green-500 flex items-center justify-center">
+               <i className={link.icon}></i> {link.text}
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </>

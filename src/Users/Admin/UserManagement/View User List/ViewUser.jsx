@@ -14,6 +14,13 @@ const ViewUser = () => {
     { title: "View User Data ", href: "" },
      
   ];
+  const mylinks = [
+    {
+      to: "/adduser",
+      text: "Create New ",
+      icon: "ri-add-line text-white text-2xl ",
+    },
+  ];
   // Define and initialize the tableRef
   const tableRef = useRef(null);
 
@@ -163,7 +170,7 @@ const ViewUser = () => {
     <>
       <HeaderNavbar />
       <Asidebar />
-      <Breadcrumb title={title} links={links} />
+      <Breadcrumb title={title} links={links} mylinks={mylinks} />
       <div className="p-4 sm:ml-72 bg-gray-200">
         <div className="p-4 border-2 border-gray-200 border-solid rounded-lg bg-white mt-14">
         <h3 className="text-2xl font-bold">View User Data-ADMIN</h3> 
