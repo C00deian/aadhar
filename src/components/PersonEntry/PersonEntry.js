@@ -115,7 +115,7 @@ const PersonEntry = () => {
       <Breadcrumb title={title} links={links} mylinks={mylinks} />
 
       <div className="p-12 sm:ml-72  mb-48 bg-gray-200">
-        <div className="p-4 border-2 rounded-lg mt-14 shadow-xl bg-white">
+        <div className="p-2 border-2 rounded-lg  shadow-xl bg-white">
           <div className="PurposeGrid ">
             <Input
               onChange={handleInputChange}

@@ -24,7 +24,7 @@ const MobileUpdate = () => {
       <Asidebar />
       <Breadcrumb title={title} links={links} mylinks={mylinks}/>
       <div className="p-4 sm:ml-72 mb-32 bg-gray-300">
-        <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg   mt-14 bg-white">
+        <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg    bg-white">
           <h3 className="text-2xl font-bold ml-10">Mobile Upadate</h3>
           <form className="m-5 p-6 border rounded-md shadow-md bg-white">
             <div className="grid gap-6 mb-6 md:grid-cols-2">

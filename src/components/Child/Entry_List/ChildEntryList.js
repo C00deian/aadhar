@@ -63,7 +63,7 @@ function ChildEntryList() {
 
       {/* data */}
       {Products ? (
-        <div className="p-12 sm:ml-72  mb-48 bg-gray-200">
+        <div className="p-10 sm:ml-72  mb-48 bg-gray-200">
           <div className="p-4 border-2 rounded-lg  shadow-xl bg-white">
             <div className="Download-Button">
               <CopyButton />

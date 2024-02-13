@@ -44,7 +44,7 @@ const AddAdminUser = () => {
       <Asidebar />
       <Breadcrumb title={title} links={links} mylinks={mylinks} />
       <div className="p-4 sm:ml-72 bg-gray-300">
-        <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg mt-14 bg-white">
+        <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg  bg-white">
           <h3 className="text-2xl font-bold ml-10">Add Customer</h3>
           <form className="m-5 p-6 border-1 shadow-sm rounded-md bg-white">
             <div className="grid gap-6 mb-6 md:grid-cols-2">

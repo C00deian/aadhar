@@ -172,7 +172,7 @@ const ViewUser = () => {
       <Asidebar />
       <Breadcrumb title={title} links={links} mylinks={mylinks} />
       <div className="p-4 sm:ml-72 bg-gray-200">
-        <div className="p-4 border-2 border-gray-200 border-solid rounded-lg bg-white mt-14">
+        <div className="p-4 border-2 border-gray-200 border-solid rounded-lg bg-white ">
         <h3 className="text-2xl font-bold">View User Data-ADMIN</h3> 
           <div className="flex items-center justify-between mb-4">
             <div>
